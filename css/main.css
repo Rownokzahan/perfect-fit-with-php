@@ -1,0 +1,133 @@
+/* home-page */
+
+nav{
+    background-color: rgb(240, 229, 239);
+}
+.nav-link{
+    margin-left: 30px;
+    color: black ;
+}
+.wish-icon{
+    font-size: larger ;
+}
+.wish-item-amount{
+    position: relative;
+    bottom: 11px;
+    right: 11px;
+    background-color: rgb(248, 245, 245);
+    border-radius: 45%;
+    padding: 0 5px;
+    color:  rgb(50, 4, 4);
+
+}
+.profile-icon{
+    font-size: larger;
+    background-color: rgb(235, 227, 227);
+    border-radius: 50%;
+    box-shadow: 0 0 2px 0;
+    padding: 1px 5px;
+}
+
+
+.banner{
+    background-image: url("/Perfect-fit-Images/banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height:620px;
+}
+.banner-content{
+    margin-left: 10%;
+    padding: 140px 0 200px;
+    width: 50%;
+    color: rgb(50, 4, 4);
+}
+
+
+.review-section{
+    background-color: antiquewhite;
+}
+.review-section h2{
+    color: rgb(50, 4, 4);
+}
+
+.review-profile{
+    font-size: 45px;   
+}
+.review{
+    background-color: rgb(243, 54, 161);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0px 2px 5px 0px rgba(47, 1, 1, 0.75);
+    padding: 20px 15px;
+}
+
+
+footer{
+    padding: 13px;
+    text-align: center;
+    background-color: rgb(15, 1, 36);
+    color: white;
+}
+.contact-icons i{
+    box-shadow: 0 0 2px 0;
+    padding: 3px 8px;
+    border-radius: 25%;
+}
+.contact-icons i:hover{
+    position: relative;
+    bottom: 4px;
+}
+#home-info, #mail-info, #phone-info{
+    display: none;
+}
+footer p{
+    font-size: 14px;
+}
+footer p.copyright{
+    font-size: 12px;
+}
+
+
+/* all-dresses-page */
+
+.all-dresses-list{
+    margin: 2%;
+}
+.dress-category{
+    background-color: rgb(240, 229, 239);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+.dress-category-name{
+    font-size: 30px;
+    color: rgb(50, 4, 4);
+}
+.line{
+    border-bottom: 4px solid rgb(238, 9, 180);
+    width: 100px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.dress-item{
+    box-shadow: 0 0 6px 0;
+    background-color: #fff;
+    border-radius: 15px;
+    width: 284px;
+    height: auto;
+    margin-top: 20px;
+}
+.dress-item img{
+    width: 100%;
+    height: 300px;
+    border-radius: 11px 11px 0 0;
+    margin-bottom: 10px ;
+}
+.item-body{
+    padding-left:20px ;
+    color:  rgb(50, 4, 4);
+}
+.dress-item button.btn.btn-primary{
+    width: 100%;
+}
