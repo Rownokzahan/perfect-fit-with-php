@@ -1,3 +1,9 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 /* home-page */
 
 nav{
@@ -131,3 +137,69 @@ footer p.copyright{
 .dress-item button.btn.btn-primary{
     width: 100%;
 }
+
+
+/* cutomize-page */
+
+.title h1{
+    width: fit-content;
+    margin: 10px auto;
+    background-image: linear-gradient(to right, rgb(105, 8, 150),rgb(164, 20, 116));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    
+}
+
+.basic-box-style{
+    color:  rgb(50, 4, 4);
+    background-color: rgb(240, 229, 239);
+    border-radius: 15px;   
+    padding: 20px;
+    margin: 25px;
+}
+
+/* p-3 px-4 mx-4 mt-4 my-4 */
+
+.dress-img{
+    width: 266px;
+    height: 327px;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.box-style{
+    background-color: #fff;
+    border-top: 6px solid rgb(175, 14, 162);
+    border-radius: 14px;
+    margin: 0 20px;
+    padding: 10px 20px;   
+}
+
+div.form-check.col{
+    margin: 30px;
+}
+
+input[type=radio]{ 
+    /* visibility: hidden; */
+    position: relative;
+    bottom: -120px;
+    left: 70px;
+}
+  
+input+img {
+    cursor: pointer;
+    width: 120px;
+}
+
+
+/* @media only screen and (min-width: 800px) {
+    .price-update {
+        position: fixed;
+        right: 0;
+        bottom: 130px;
+        line-height: 0;
+    }
+} */
+
+

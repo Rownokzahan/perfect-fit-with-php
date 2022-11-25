@@ -50,88 +50,106 @@
     </header>
 
     <main>
-        <div>
-            <section id="all_course_title">
-                <div class="container-fluid text-center">
-                    <h1 class="title">All Products</h1>
-                    <p class="tagline">Enroll our courses that suit for you. Here you can find your favourite one.</p>
-                    <span class="line"></span>
-                </div>
-            </section>
-        
-            <section id="course_tab" class="d-none">
-                <div class="container-fluid px-122">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                            <input type="text" class="form-control" placeholder="Search Here ..">
-                        </div>
-                        <div class="d-flex filter">
-                            <span class="category-label">Categories:</span>
-                            <select class="form-select">
-                                <option value="">All</option>
-                                @foreach ($categories as $category)
-                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                @endforeach
-                            </select>
-                        </div>
+        <section id="form" class="mb-5">
+            <img class="background" src="img/header_image.jpg" alt="">
+            <div class="container-fluid">
+                <div class="content">
+                    <div class="head">
+                        <h4 class="title">Delivery and Payment Info</h4>
+                        <span class="tagline">Please fill up the form.</span>
                     </div>
-                </div>
-            </section>
-        
-            @foreach ($categories as $category)
-                <section class="course-category @if ($loop->iteration % 2 == 1) bg-primary-light @endif">
-                    <div class="container-fluid px-122">
-                        <div class="course-sub-title">
-                            <div class="title">
-                                {{ $category->name }}
-                                <div class="hr-line">
-                                    <div class="hr-sub-line"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
-        
-                            @foreach ($products->where('product_category_id', $category->id) as $product)
-                                <div class="col ">
-                                    <div class="course-item">
-                                        <div class="image">
-                                            <img src="{{ asset($product->photo) }}" alt="">
+                    <div class="body">
+                        <form wire:submit.prevent>
+                            <div class="row items row-cols-1 row-cols-md-2 gx-5">
+                                <div class="col">
+                                    <div class="row row-cols-1 gy-3">
+                                        <div class="form-group col">
+                                            <label for="">Full Name</label>
+                                            <input type="text" class="@error('name') border-danger @enderror form-control"
+                                                placeholder="Full Name" wire:model.lazy='name'>
+                                                <small class="text-danger"></small>
                                         </div>
-                                        <div class="course-content">
-                                            <div class="description">
-                                                <h3 class="title">
-                                                    {{ $product->name }}
-                                                </h3>
-                                                <div>
-                                                    <span class="fee">Fee</span> <span class="amount">
-                                                        ৳{{ $product->rate }}</span>
-                                                </div>
-                                                <div class="tagline">
-                                                    {{ $product->short_description }}
-                                                </div>
-                                                <div class="text-center">
-                                                    <a href="{{ route('customization', $product->id) }}"
-                                                        class="btn enroll btn-outline-primary rounded-pill">
-                                                        <span class="material-icons">
-                                                            menu_book
-                                                        </span>
-                                                        Buy Now
-                                                    </a>
-                                                </div>
-                                            </div>
+                                        <div class="form-group col">
+                                            <label for="">Contact Number</label>
+                                            <input type="text" class="@error('contact') border-danger @enderror form-control"
+                                                placeholder="Contact Number" wire:model.lazy='contact'>
+                                                <small class="text-danger"></small>
+                                        </div>
+        
+                                        <div class="form-group col">
+                                            <label for="">Delivery Address</label>
+                                            <textarea class="@error('delivery_location') border-danger @enderror form-control" wire:model.lazy='delivery_location'
+                                                placeholder="Delivery Address (In Details)"></textarea>
+                                                <small class="text-danger"></small>
+                                        </div>
+        
+                                        <div class="form-group col">
+                                            <label for="">Payment Method</label>
+                                            <select wire:model='payment_type'
+                                                class="@error('payment_type') border-danger @enderror form-select">
+                                                <option value="">Select</option>
+                                                <option>Bkash</option>
+                                                <option>Rocket</option>
+                                                <option>Nagad</option>
+                                            </select>
+                                            @error('payment_type')
+                                                <small class="text-danger">{{ $message }}</small>
+                                            @enderror
+                                        </div>
+                                        <div class="form-group col">
+                                            <label for="">Enter Transaction ID</label>
+                                            <input wire:model.lazy='trx_id' type="text"
+                                                class="@error('trx_id') border-danger @enderror form-control"
+                                                placeholder="Enter Transaction ID">
+                                            @error('trx_id')
+                                                <small class="text-danger">{{ $message }}</small>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
-                            @endforeach
+                                <div class="col">
+                                    <div id="admission-open">
+                                        <div class="course color-1">
+                                            <div class="back"></div>
+                                            <span class="section-title">Product Name</span>
+                                            <div class="date">{{ $order->product->name }}</div>
+                                        </div>
+                                        <div class="course color-1">
+                                            <div class="back"></div>
+                                            <span class="section-title">Order ID</span>
+                                            <div class="date">{{ $order->id + 1000 }}</div>
+                                        </div>
+                                        <div class="course color-1">
+                                            <div class="back"></div>
+                                            <span class="section-title">Total Amount</span>
+                                            <div class="date">
+                                                {{ @$order->product_rate + @$order->length_rate + @$order->body_length_rate + @$order->sleeve_length_rate + @$order->orderDetails->sum('rate') }}
         
+                                            </div>
+                                        </div>
+                                        <div class="course color-2">
+                                            <div class="back"></div>
+                                            <span class="section-title">Delivery Date</span>
+                                            <div class="date">
+                                                {{ $order->created_at->addDay('7')->format('d/m/Y') }}
+                                            </div>
+                                            <h3 class="course-title">
+                                                Via Corier Service
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
         
-        
-                        </div>
+                            <div class="d-flex mt-5 justify-content-end">
+                                <button wire:click='save' class="btn btn-primary rounded-pill text-white">Confirm Order</button>
+                            </div>
+                        </form>
                     </div>
-                </section>
-            @endforeach        
+                </div>
+            </div>
+        </section>
         
-        </div>
     </main>
 
     <footer>
