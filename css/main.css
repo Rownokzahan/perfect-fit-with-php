@@ -193,13 +193,18 @@ input+img {
 }
 
 
-/* @media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1490px) {
     .price-update {
         position: fixed;
         right: 0;
         bottom: 130px;
         line-height: 0;
     }
-} */
+}
+
+span.input-group-text{
+    background: #cb2475;
+    color: white;
+}
 
 
