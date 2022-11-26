@@ -18,7 +18,7 @@
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container container-fluid">
-                <a class="navbar-brand" href="#"><img src="Perfect-fit-Images/logo.png" alt="logo" srcset=""></a>
+                <a class="navbar-brand" href="home.html"><img src="Perfect-fit-Images/logo.png" alt="logo" srcset=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -27,10 +27,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Home</a>
+                            <a class="nav-link" aria-current="page" href="home.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Dresses</a>
+                            <a class="nav-link" href="all-dresses.html">Dresses</a>
                         </li>
                     </ul>
                     <div class="nav-item d-flex">
@@ -50,73 +50,105 @@
     </header>
 
     <main  class="overflow-hidden">
+        <div class="title pt-4">
+            <h1>Delivery and Payment Info</h1>
+        </div>
         <div class="row">
             <div class="col">
-                <form action="" id="customize-form" class="needs-validation" novalidate>
-                    <div class="measurement-section row basic-box-style">
-                        <div class="title">
-                            <h1>Delivery and Payment Info</h1>
-                            <p>Please fill up the form.</p>
-                        </div>
-                        <h3>Measure Section</h3> 
+                <form action="" id="order-form" class="needs-validation" novalidate>
+                    <div class="delivery-detail">
+                        <h4 class="text-center">Please Fill Up The Form Bellow</h4> 
                         <div class="form-check">
-                            <div class="mb-3">
-                                <label class="form-label"><h6>Length of Dress</h6></label>
-                                <div class="input-group mb-3 has-validation">
-                                    <input type="number" class="form-control" name="length" required>
-                                    <span class="input-group-text">inch</span>
+                            <div class="mt-3">
+                                <label class="form-label"><h6>Full Name</h6></label>
+                                <div class="input-group has-validation">
+                                    <input type="text" class="form-control" name="name" placeholder="Enter Full Name" required>
                                     <div class="invalid-feedback">
-                                        Enter the dress length.
+                                        Enter Full Name.
                                     </div>
                                 </div>                                  
                             </div>
                         </div>
                         
                         <div class="form-check">
-                            <div class="mb-3">
-                                <label class="form-label"><h6>Length of Body</h6></label>
-                                <div class="input-group mb-3 has-validation">
-                                    <input type="number" class="form-control" name="body" required>
-                                    <span class="input-group-text">inch</span>
+                            <div class="mt-3">
+                                <label class="form-label"><h6>Contact Number</h6></label>
+                                <div class="input-group has-validation">
+                                    <input type="text" class="form-control" name="phone" placeholder="Enter Contact Number" required>
                                     <div class="invalid-feedback">
-                                        Enter the body length.
+                                        Enter Phone Number.
                                     </div>
                                 </div>                                  
                             </div>
                         </div>  
         
                         <div class="form-check">
-                            <div class="mb-3">
-                                <label class="form-label"><h6>Length of Sleeve</h6></label>
-                                <div class="input-group mb-3 has-validation">
-                                    <input type="number" class="form-control" name="sleeve" required>
-                                    <span class="input-group-text">inch</span>
+                            <div class="mt-3">
+                                <label class="form-label"><h6>Delivery Address</h6></label>
+                                <div class="input-group has-validation">
+                                    <input type="text" class="form-control" name="address" placeholder="Enter Delivery Address(In Details)" required>
                                     <div class="invalid-feedback">
-                                        Enter the sleeve length.
+                                        Enter Receiving Address.
                                     </div>
                                 </div>                                  
                             </div>
-                        </div>  
+                        </div> 
+                        
+                        <div class="form-check">
+                            <div class="mt-3">
+                                <label class="form-label"><h6>Payment Method</h6></label>
+                                <div class="input-group has-validation">
+                                    <select class="form-select" name="payment" required>
+                                        <option selected disabled value>Choose A Payment Method</option>
+                                        <option value="bkash">Bkash</option>
+                                        <option value="nagad">Nagad</option>
+                                        <option value="rocket">Rocket</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Choose A Payment Method.
+                                    </div>
+                                </div>                                  
+                            </div>
+                        </div> 
+
+                        <div class="form-check">
+                            <div class="mt-3">
+                                <label class="form-label"><h6>Transaction ID</h6></label>
+                                <div class="input-group has-validation">
+                                    <input type="text" class="form-control" name="trx-id" placeholder="Enter Transaction ID" required>
+                                    <div class="invalid-feedback">
+                                        Enter Transaction Id of Your Payment.
+                                    </div>
+                                </div>                                  
+                            </div>
+                        </div> 
+
                     </div>
                 </form>
             </div>
 
             <div class="col">
-                <div class="basic-box-style">
-                    <div class="box-style">
-                        <h5>Regular Price </h5>
-                        <p><span id="regular-price">1200</span></p>
+                <div class="order-detail basic-box-style">
+                    <div>
+                        <h3>Dress Name</h3>
+                        <span id="dress-name">Bautiful Abaya</span>
                     </div>
-                
-
-                    <div class="box-style">
-                        <h6>Total Price = Regular Price + Customization Charge</h6>
-                        <p> <span id="regular-price">1200</span></p>
+                    <div>
+                        <h3>Order ID</h3>
+                        <span id="order-id">123004</span>
                     </div>
-    
+                    <div>
+                        <h3>Total Amount</h3>
+                        <span id="total-price">1950</span>
+                    </div>
+                    <div>
+                        <h3>Delivery Date</h3>
+                        <span id="delivery-date">04-12-2023</span>
+                    </div>
+                    <h2>Via Courier Service</h2>
                     
-                    <div class="submit-btn d-flex justify-content-end me-3 my-2">
-                        <button type="submit" form="customize-form" class="btn btn-primary">Next >></button>
+                    <div class="submit-btn">
+                        <button type="submit" form="order-form" class="btn btn-primary">Confirm Order</button>
                     </div>
                 </div>
             </div>

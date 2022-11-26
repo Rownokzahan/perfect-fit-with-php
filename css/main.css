@@ -4,7 +4,7 @@
     padding: 0;
 }
 
-/* home-page */
+/* ---------------------------home-page------------------------------------------------------------- */
 
 nav{
     background-color: rgb(240, 229, 239);
@@ -95,7 +95,7 @@ footer p.copyright{
 }
 
 
-/* all-dresses-page */
+/* ---------------------all-dresses-page------------------------------------------------------- */
 
 .all-dresses-list{
     margin: 2%;
@@ -134,12 +134,12 @@ footer p.copyright{
     padding-left:20px ;
     color:  rgb(50, 4, 4);
 }
-.dress-item button.btn.btn-primary{
+.dress-item a.btn.btn-primary{
     width: 100%;
 }
 
 
-/* cutomize-page */
+/*--------------------------------- cutomize-page-------------------------------------------- */
 
 .title h1{
     width: fit-content;
@@ -148,9 +148,7 @@ footer p.copyright{
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    
 }
-
 .basic-box-style{
     color:  rgb(50, 4, 4);
     background-color: rgb(240, 229, 239);
@@ -158,16 +156,12 @@ footer p.copyright{
     padding: 20px;
     margin: 25px;
 }
-
-/* p-3 px-4 mx-4 mt-4 my-4 */
-
 .dress-img{
     width: 266px;
     height: 327px;
     border-radius: 12px;
     margin: 20px 0;
 }
-
 .box-style{
     background-color: #fff;
     border-top: 6px solid rgb(175, 14, 162);
@@ -175,23 +169,22 @@ footer p.copyright{
     margin: 0 20px;
     padding: 10px 20px;   
 }
-
 div.form-check.col{
     margin: 30px;
 }
-
 input[type=radio]{ 
-    /* visibility: hidden; */
     position: relative;
     bottom: -120px;
     left: 70px;
-}
-  
+}  
 input+img {
     cursor: pointer;
     width: 120px;
 }
-
+span.input-group-text{
+    background: #cb2475;
+    color: white;
+}
 
 @media only screen and (min-width: 1490px) {
     .price-update {
@@ -202,9 +195,32 @@ input+img {
     }
 }
 
-span.input-group-text{
-    background: #cb2475;
-    color: white;
+/*--------------------------------- order-page-------------------------------------------- */
+
+.delivery-detail{
+    color:  rgb(18, 1, 1);
+    margin: 20px;
+    margin-bottom: 100px;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: larger;
+    /* box-shadow: 0 0 3px 0; */
 }
 
-
+.order-detail{
+    padding: 35px 60px;
+    background-color: #fff;
+}
+.order-detail span{
+    display: inline-block;
+    padding-left: 15px;
+    font-size: 19px;
+    margin-bottom: 16px;
+}
+.order-detail .btn{
+    position: relative;
+    font-size: 24px;
+    margin-top: 60px;
+    padding: 10px 15px;
+    box-shadow: 0 0 4px 0;
+}
