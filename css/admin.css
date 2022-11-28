@@ -1,0 +1,99 @@
+/* -----------------home page-------------- */
+.side-bar{
+    height: 640px;
+    padding: 20px;
+    padding-left: 30px;
+    background-image: linear-gradient(rgb(233, 190, 218),rgba(136, 118, 224, 0.363));
+}
+.navbar-nav{
+    margin-top: 30px;
+}
+
+ul li a.nav-link{
+    padding: 10px;
+    margin-bottom: 10px;
+    width: max-content;
+}
+
+ul li a.nav-link i{
+    font-weight: 900;
+    color: #cb2475;
+}
+.down-symbol{
+    color: #cb2475;
+    font-size: 10px;
+    position: relative;
+    top: -2px;
+    left: 2px;
+}
+
+#dress-info, #customization{
+    cursor: pointer;
+    user-select: none;
+}
+#dress-info-detail, #customization-detail{
+    padding-left: 25px;
+    display: block;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards .row .col h2{
+    width: max-content;
+}
+
+
+/* -------------------Category/ view page ------------- */
+
+.main-content{
+    display: flex;
+    justify-content: center;
+
+    margin-top: 120px;
+}
+.add-btn{
+    position: relative;
+    top: -35px;
+    right: -50px;
+    background-color: rgb(226, 43, 217);
+    height: 30px;
+    font-size: large;
+}
+.table{
+    width: 70%;
+}
+
+.table-btn, .add-btn{
+    padding: 2px 10px;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+}
+
+.table-btn:hover ,.add-btn:hover{
+    color: white;
+    cursor: pointer;
+}
+
+#category-name{
+    position: relative;
+    border: none;
+    border-bottom: 2px solid;
+    margin-left: 4px;
+    width: 20%;
+    top: -4px;
+}
+
+
+/* ---------------------- dress/ view page-------------- */
+.table-description{
+    display: inline-table;
+    display: flex;
+    padding: 0;
+    height: 100px;
+    overflow: hidden;
+}
