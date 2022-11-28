@@ -89,11 +89,21 @@ ul li a.nav-link i{
 }
 
 
-/* ---------------------- dress/ view page-------------- */
+/* ---------------------- dress page-------------- */
 .table-description{
     display: inline-table;
     display: flex;
     padding: 0;
     height: 100px;
     overflow: hidden;
+}
+
+/* ---------------------- order-detail page-------------- */
+
+.order-card{
+    box-shadow: 0 0 4px 0;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 14px;
+    /* width: 50%; */
 }
