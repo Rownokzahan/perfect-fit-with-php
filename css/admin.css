@@ -79,16 +79,6 @@ ul li a.nav-link i{
     cursor: pointer;
 }
 
-#category-name{
-    position: relative;
-    border: none;
-    border-bottom: 2px solid;
-    margin-left: 4px;
-    width: 20%;
-    top: -4px;
-}
-
-
 /* ---------------------- dress page-------------- */
 .table-description{
     display: inline-table;
