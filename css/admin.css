@@ -107,3 +107,24 @@ ul li a.nav-link i{
     border-radius: 14px;
     /* width: 50%; */
 }
+
+/* -------------- length cost page----------- */
+.length-card{
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 5px 0;
+    margin: 40px 10px;
+    margin-left: 25px;
+}
+
+footer{
+    background-color: rgb(2, 0, 14);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.row.length-section{
+    width: 100%;
+    overflow: hidden;
+}

@@ -1,5 +1,24 @@
-//--------For Customer Home Page---------
+//-------- For Every From Validation (Bootsrap) ---------
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+    'use strict'
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
 
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+        }, false)
+    })
+})()
+
+//--------For Customer Footer---------
 $('#home-icon').click(function(){
     $('#home-info').css("display","block");
 
@@ -19,7 +38,7 @@ $('#phone-icon').click(function(){
     $('#mail-info').css("display","none");
 });
 
-//--------For Admin Home Page---------
+//--------For Admin Navbar---------
 
 $('#dress-info').click(function(){
     if($('#dress-info-detail').html() !=""){
@@ -45,9 +64,9 @@ $('#customization').click(function(){
     }
     else{
         $('#customization-detail').html(`
-            <a href="" class="nav-link">
+            <a href="length-cost.html" class="nav-link">
                 <i class="bi bi-rulers"></i>
-                Measurement
+                Length Cost
             </a>
         `); 
     }
