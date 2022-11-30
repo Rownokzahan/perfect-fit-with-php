@@ -1,0 +1,73 @@
+<nav>
+    <div class="side-bar">
+        <div class="nav-logo">
+            <a href="home.html" class="">
+                <img src="/Perfect-fit-Images/logo.png" alt="Logo" width="150">
+            </a>
+        </div>
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a href="home.html" class="nav-link">
+                    <i class="bi bi-house-door-fill"></i>
+                    Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="dress-info">
+                    <i class="bi bi-journal-text"></i>
+                    Dresses Info <span class="down-symbol">&#9660</span>
+                </a>
+                <div id="dress-info-detail"></div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" id="customization">
+                    <i class="bi bi-scissors"></i>
+                    Customization <span class="down-symbol">&#9660</span>
+                </a>
+                <div id="customization-detail"></div>
+            </li>
+            <li class="nav-item">
+                <a href="orders.html" class="nav-link">
+                    <i class="bi bi-box-seam-fill"></i>
+                    Orders
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<script>
+    $('#dress-info').click(function () {
+        if ($('#dress-info-detail').html() != "") {
+            $('#dress-info-detail').html('');
+        }
+        else {
+            $('#dress-info-detail').html(`
+            <a href="category.html" class="nav-link">                            
+                <i class="bi bi-stack"></i>
+                Category
+            </a>
+            <a href="product.html" class="nav-link">
+                <i class="bi bi-images"></i>    
+                Dresses
+            </a>
+        `);
+        }
+    });
+
+    $('#customization').click(function () {
+        if ($('#customization-detail').html() != "") {
+            $('#customization-detail').html('');
+        }
+        else {
+            $('#customization-detail').html(`
+            <a href="length-cost.html" class="nav-link">
+                <i class="bi bi-rulers"></i>
+                Length Cost
+            </a>
+        `);
+        }
+    });
+</script>
