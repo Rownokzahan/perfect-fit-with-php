@@ -36,7 +36,7 @@ nav{
 
 
 .banner{
-    background-image: url("/Perfect-fit-Images/banner.jpg");
+    background-image: url("../Perfect-fit-Images/banner.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
