@@ -23,56 +23,72 @@
                         <tr>
                             <th scope="col">SL No</th>
                             <th scope="col">Order Id</th>
+                            <th scope="col">Total Price</th>
                             <th scope="col">Customer Name</th>
                             <th scope="col">Contact</th>
+                            <th scope="col">Delivery Address</th>
                             <th scope="col">Payment Method</th>
                             <th scope="col">Transaction ID</th>
-                            <th scope="col">Total Price</th>
-                            <!-- <th scope="col">Status</th> -->
                             <th scope="col">More</th>
+                            <th scope="col">Status</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="display-data-table">
                         <tr>
                             <th scope="row">1</th>
-                            <td>G10012</td>
-                            <td>Rownok Zahan</td>
-                            <td>017463879271</td>
-                            <td>Nagad</td>
-                            <td>bdr3456</td>
+                            <td>8975</td>
                             <td>1950</td>
-                            <!-- <td>Out For Delivery</td> -->
-                            <td>
-                                <a class="table-btn bg-info" data-bs-toggle="modal"
-                                    data-bs-target="#order-details">Details</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>G10012</td>
                             <td>Rownok Zahan</td>
-                            <td>017463879271</td>
+                            <td>09343t432</td>
+                            <td>Rangpur</td>
                             <td>Bkash</td>
-                            <td>bdr3456</td>
-                            <td>1950</td>
-                            <!-- <td>Out For Delivery</td> -->
+                            <td>rw1khc</td>
                             <td>
-                                <a class="table-btn bg-info" data-bs-toggle="modal"
-                                    data-bs-target="#order-details">Details</a>
+                                <button class="table-btn bg-info" data-bs-toggle="modal"
+                                    data-bs-target="#order-details">Details</button>
+                            </td>
+                            <td>
+                                <div class="d-flex gap-3">
+                                    <button type="button" onclick="deleteUser('.$id.')" class="table-btn bg-danger">Cancel</button>
+                                </div>
                             </td>
                         </tr>
                         <tr>
-                            <th scope="row">3</th>
-                            <td>G10012</td>
-                            <td>Rownok Zahan</td>
-                            <td>017463879271</td>
-                            <td>Rocket</td>
-                            <td>bdr3456</td>
+                            <th scope="row">1</th>
+                            <td>8975</td>
                             <td>1950</td>
-                            <!-- <td>Out For Delivery</td> -->
+                            <td>Rownok Zahan</td>
+                            <td>09343t432</td>
+                            <td>Rangpur</td>
+                            <td>Bkash</td>
+                            <td>rw1khc</td>
                             <td>
-                                <a class="table-btn bg-info" data-bs-toggle="modal"
-                                    data-bs-target="#order-details">Details</a>
+                                <button class="table-btn bg-info" data-bs-toggle="modal"
+                                    data-bs-target="#order-details">Details</button>
+                            </td>
+                            <td>
+                                <div class="d-flex gap-3">
+                                    <button type="button" onclick="deleteUser('.$id.')" class="table-btn bg-danger">Cancel</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>8975</td>
+                            <td>1950</td>
+                            <td>Rownok Zahan</td>
+                            <td>09343t432</td>
+                            <td>Rangpur</td>
+                            <td>Bkash</td>
+                            <td>rw1khc</td>
+                            <td>
+                                <button class="table-btn bg-info" data-bs-toggle="modal"
+                                    data-bs-target="#order-details">Details</button>
+                            </td>
+                            <td>
+                                <div class="d-flex gap-3">
+                                    <button type="button" onclick="deleteUser('.$id.')" class="table-btn bg-danger">Cancel</button>
+                                </div>
                             </td>
                         </tr>
                     </tbody>
@@ -248,4 +264,5 @@
 <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
 <!-- custom js -->
 <script src="../script/home-page.js"></script>
+<script src="../script/order.js"></script>
 </html>
