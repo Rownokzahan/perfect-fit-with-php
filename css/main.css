@@ -94,6 +94,9 @@ footer p.copyright{
     font-size: 12px;
 }
 
+#logout-btn{
+    display: none;
+}
 
 /* ---------------------all-dresses-page------------------------------------------------------- */
 

@@ -64,7 +64,7 @@ ul li a.nav-link i{
     font-size: large;
 }
 .table{
-    width: 70%;
+    width: max-content;
 }
 
 .table-btn, .add-btn{
@@ -72,6 +72,7 @@ ul li a.nav-link i{
     border-radius: 4px;
     color: white;
     text-decoration: none;
+    border: none;
 }
 
 .table-btn:hover ,.add-btn:hover{
@@ -81,10 +82,8 @@ ul li a.nav-link i{
 
 /* ---------------------- dress page-------------- */
 .table-description{
-    display: inline-table;
-    display: flex;
-    padding: 0;
     height: 100px;
+    width: 400px;
     overflow: hidden;
 }
 
@@ -100,6 +99,8 @@ ul li a.nav-link i{
 
 /* -------------- length cost page----------- */
 .length-card{
+    width: max-content;
+    height: fit-content;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 5px 0;
@@ -112,9 +113,4 @@ footer{
     padding: 20px;
     text-align: center;
     color: white;
-}
-
-.row.length-section{
-    width: 100%;
-    overflow: hidden;
 }

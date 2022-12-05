@@ -31,7 +31,7 @@
                             <th scope="col">Operation</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="display-data-table">
                         <tr>
                             <th scope="row">1</th>
                             <td>Gown</td>
@@ -107,8 +107,17 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-
-                            <form class="needs-validation" id="add-product-form" novalidate>
+                            <div class="message">
+                                <p  id="create-message" class="text-center text-warning"></p>
+                            </div>
+                            <form action="../php/dress-item/create.php" method="post" class="needs-validation" id="add-product-form" novalidate>
+                                <div>
+                                    <label for="product-name" class="form-label">Product Name</label>
+                                    <input type="text" class="form-control" name="product-name" required>
+                                    <div class="invalid-feedback">
+                                        Please Enter Product Name!
+                                    </div>
+                                </div>
                                 <div>
                                     <label for="product-category" class="form-label">Select Product Category</label>
                                     <select class="form-select" name="category" required>
@@ -122,16 +131,8 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <label for="product-name" class="form-label">Product Name</label>
-                                    <input type="text" class="form-control" id="product-name" name="product-name"
-                                        value="" required>
-                                    <div class="invalid-feedback">
-                                        Please Enter Product Name!
-                                    </div>
-                                </div>
-                                <div>
                                     <label for="product-price" class="form-label">Price</label>
-                                    <input type="text" class="form-control" id="product-price" name="price" required>
+                                    <input type="text" class="form-control" name="product-price" required>
                                     <div class="invalid-feedback">
                                         Please Enter Product Price!
                                     </div>
@@ -139,16 +140,15 @@
                                 <div>
                                     <label for="description" class="form-label">Description</label>
                                     <div class="input-group has-validation">
-                                        <input type="text" class="form-control" name="price" id="description" required>
+                                        <input type="text" class="form-control" name="description" required>
                                         <div class="invalid-feedback">
                                             Please enter product description.
                                         </div>
                                     </div>
                                 </div>
                                 <div>
-                                    <label for="validationCustom03" class="form-label">Image</label>
-                                    <input type="file" class="form-control" name="product-image" id="validationCustom03"
-                                        required>
+                                    <label for="product-image" class="form-label">Image</label>
+                                    <input type="file" class="form-control" name="product-image" required>
                                     <div class="invalid-feedback">
                                         Please enter product image.
                                     </div>
@@ -157,8 +157,6 @@
 
                         </div>
                         <div class="text-end m-4">
-                            <button type="button" class="btn bg-danger text-white me-3"
-                                data-bs-dismiss="modal">Close</button>
                             <button type="submit" form="add-product-form" class="btn btn-primary">Create</button>
                         </div>
                     </div>
@@ -175,10 +173,20 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
+                            <div class="message">
+                                <p  id="update-message" class="text-center text-warning"></p>
+                            </div>
                             <form class="needs-validation" id="update-product-form" novalidate>
                                 <div>
+                                    <label for="product-name" class="form-label">Product Name</label>
+                                    <input type="text" class="form-control" name="product-name" required>
+                                    <div class="invalid-feedback">
+                                        Please Enter Product Name!
+                                    </div>
+                                </div>
+                                <div>
                                     <label for="product-category" class="form-label">Select Product Category</label>
-                                    <select class="form-select" id="validationCustom04" required>
+                                    <select class="form-select" name="category" required>
                                         <option selected disabled value="">Choose A Category</option>
                                         <option>Abaya</option>
                                         <option>Gown</option>
@@ -189,16 +197,8 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <label for="product-name" class="form-label">Product Name</label>
-                                    <input type="text" class="form-control" id="product-name" name="product-name"
-                                        value="" required>
-                                    <div class="invalid-feedback">
-                                        Please Enter Product Name!
-                                    </div>
-                                </div>
-                                <div>
                                     <label for="product-price" class="form-label">Price</label>
-                                    <input type="text" class="form-control" id="product-price" name="price" required>
+                                    <input type="text" class="form-control" name="product-price" required>
                                     <div class="invalid-feedback">
                                         Please Enter Product Price!
                                     </div>
@@ -206,25 +206,23 @@
                                 <div>
                                     <label for="description" class="form-label">Description</label>
                                     <div class="input-group has-validation">
-                                        <input type="text" class="form-control" name="price" id="description" required>
+                                        <input type="text" class="form-control" name="description" required>
                                         <div class="invalid-feedback">
-                                            Please enter product description!
+                                            Please enter product description.
                                         </div>
                                     </div>
                                 </div>
                                 <div>
-                                    <label for="validationCustom03" class="form-label">Image</label>
-                                    <input type="file" class="form-control" name="product-image" id="validationCustom03"
-                                        required>
+                                    <label for="product-image" class="form-label">Image</label>
+                                    <input type="file" class="form-control" name="product-image" required>
                                     <div class="invalid-feedback">
-                                        Please enter product image!
+                                        Please enter product image.
                                     </div>
                                 </div>
+                                <input type="hidden" id="hidden" name="id">
                             </form>
                         </div>
                         <div class="text-end m-4">
-                            <button type="button" class="btn bg-danger text-white me-3"
-                                data-bs-dismiss="modal">Close</button>
                             <button type="submit" form="update-product-form" class="btn btn-warning">Update</button>
                         </div>
                     </div>
@@ -241,4 +239,5 @@
 <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
 <!-- custom js -->
 <script src="../script/home-page.js"></script>
+<script src="../script/dress-item.js"></script>
 </html>

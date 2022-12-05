@@ -20,8 +20,10 @@
         </div>
         <div class="row">
             <div class="col">
-                <form action="" id="order-form" class="needs-validation" novalidate>
-                    <div class="delivery-detail">
+                <form id="order-form" class="needs-validation" novalidate>
+                    <input type="hidden" name="order-id" value="123004">
+                    <input type="hidden" name="total-price" value="1950">
+                    <div class="delivery-detail">                        
                         <h4 class="text-center">Please Fill Up The Form Bellow</h4>
                         <div class="form-check">
                             <div class="mt-3">
@@ -117,7 +119,7 @@
                         <span id="order-id">123004</span>
                     </div>
                     <div>
-                        <h3>Total Amount</h3>
+                        <h3>Total Price</h3>
                         <span id="total-price">1950</span>
                     </div>
                     <div>
@@ -139,4 +141,5 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
 <script src="script/home-page.js"></script>
+<script src="script/order-create.js"></script>
 </html>
