@@ -1,4 +1,4 @@
 ## xammp server does not take 0 as an input for any field so instead of 0 try 0.00 it works some times
     JSON parse is related to this problem
 
-## 
+## to see css changes Empty Cache and Hard Reload
