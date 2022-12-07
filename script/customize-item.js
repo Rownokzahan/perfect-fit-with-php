@@ -7,7 +7,9 @@ function displayData(){
         url:"../php/customize-item/display-data.php",
         type:"post",
         success:function(data,status){
-            $('#display-data-table').html(data);
+            const response = JSON.parse(data);
+            $('#display-data-table').html(response.table_body);
+            $('.customize-category').html(response.option_list);
         }
     })
 }
