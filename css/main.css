@@ -159,7 +159,7 @@ footer p.copyright{
 }
 .dress-img{
     width: 266px;
-    height: 327px;
+    height: auto;
     border-radius: 12px;
     margin: 20px 0;
 }
