@@ -16,7 +16,7 @@
                 <td>'.$name.'</td>
                 <td>'.$category.'</td>
                 <td>'.$price.'</td>
-                <td><img src="../php/customize-item/images/'.$image.'" height="90" width="90"></td>
+                <td><img src="../php/customize-item/images/'.$image.'" height="50" width="50"></td>
                 <td>
                     <div class="d-flex gap-3">
                         <button type="button" onclick="showDetails('.$id.')" class="table-btn bg-warning" data-bs-toggle="modal" data-bs-target="#update-customize-item-modal">Edit</button>

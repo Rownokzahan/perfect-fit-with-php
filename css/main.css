@@ -175,7 +175,7 @@ div.form-check.col{
 }
 input[type=radio]{ 
     position: relative;
-    bottom: -120px;
+    bottom: -140px;
     left: 70px;
 }  
 input+img {
@@ -187,12 +187,14 @@ span.input-group-text{
     color: white;
 }
 
+.price-update td{
+    padding: 0;
+}
+
 @media only screen and (min-width: 1490px) {
     .price-update {
         position: fixed;
         right: 0;
-        bottom: 130px;
-        line-height: 0;
     }
 }
 
