@@ -191,12 +191,12 @@ span.input-group-text{
     padding: 0;
 }
 
-@media only screen and (min-width: 1490px) {
+/* @media only screen and (min-width: 1490px) {
     .price-update {
         position: fixed;
         right: 0;
     }
-}
+} */
 
 /*--------------------------------- order-page-------------------------------------------- */
 

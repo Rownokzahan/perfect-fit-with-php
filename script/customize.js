@@ -11,6 +11,7 @@ function displayData(){
             const response = JSON.parse(data);
             $('#dress-info').html(response.dress_info);
             $('#customize-form').html(response.form_info);
+            $('#customize-price-table').html(response.table_info);
 
             const price = $("#price").text();
             $("#regular-price").text(price);
@@ -20,17 +21,18 @@ function displayData(){
 
 $('.customize-form').click(function(e){
     let customize_item_name=$(e.target).val()
-    console.log(customize_item_name);
+    if(customize_item_name==""){
+        return;
+    }
     $.ajax({
-        url:"php/customize/display-table-data.php"+url_variable,
-        type:"post",
+        url:"php/customize/display-table-price.php",
+        type:'post',
+        data:{
+            name:customize_item_name
+        },
         success:function(data,status){
             const response = JSON.parse(data);
-            $('#dress-info').html(response.dress_info);
-            $('#customize-form').html(response.form_info);
-
-            const price = $("#price").text();
-            $("#regular-price").text(price);
+            $('#'+response.id).text(response.price);
         }
-    })
+    });
 });
