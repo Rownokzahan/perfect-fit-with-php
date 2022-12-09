@@ -286,10 +286,10 @@
             </div>
 
             <div class="col-lg-4 col-sm-12">
-                <div class="price-update basic-box-style fixme">
+                <div class="price-update basic-box-style">
                     <div class="box-style">
                         <h5>Regular Price </h5>
-                        <span id="regular-price">1200</span>
+                        <span class="regular-price">1200</span>
                     </div>
         
                     <div class="box-style">
@@ -338,13 +338,30 @@
                     </div>
                            
                     <div class="box-style">
-                        <h6>Total Price = Regular Price + Customization Charge</h6>
-                        <span id="regular-price">1200</span>
+                        <table class="price-calculation">
+                            <tr>
+                                <td>Total Price</th>
+                                <td>=</th>
+                                <td>Price</th>
+                                <td>+</th>
+                                <td>Customization</th>
+                                <td>+</th>
+                                <td>Delivery</th>
+                            </tr>
+                            <tr>
+                                <th class="total-price"></th>
+                                <th>=</th>
+                                <th class="regular-price"></th>
+                                <th>+</th>
+                                <th class="customize-total">0</th>
+                                <th>+</th>
+                                <th class="delivery-price">100</th>
+                            </tr>
+                        </table>
                     </div>
-    
-                    
-                    <div class="submit-btn d-flex justify-content-end me-3 my-2">
-                        <button type="submit" form="customize-form" class="btn btn-primary">Next >></button>
+
+                    <div class="submit-btn">
+                        <button type="submit" form="customize-form" class="btn btn-primary">Order Now</button>
                     </div>
                 </div>
             </div>

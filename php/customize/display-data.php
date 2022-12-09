@@ -81,10 +81,10 @@
                     <div class="mb-3">
                         <label class="form-label"><h6>Length of Dress</h6></label>
                         <div class="input-group mb-3 has-validation">
-                            <input type="number" class="form-control" name="length" required>
+                            <input type="number" class="form-control" name="length" min="10" max="80" required>
                             <span class="input-group-text">inch</span>
                             <div class="invalid-feedback">
-                                Enter the dress length.
+                                Enter the dress length between 10 to 79 inch.
                             </div>
                         </div>                                  
                     </div>
@@ -94,10 +94,10 @@
                     <div class="mb-3">
                         <label class="form-label"><h6>Length of Body</h6></label>
                         <div class="input-group mb-3 has-validation">
-                            <input type="number" class="form-control" name="body" required>
+                            <input type="number" class="form-control" name="body" min="1" max="50" required>
                             <span class="input-group-text">inch</span>
                             <div class="invalid-feedback">
-                                Enter the body length.
+                                Enter the body length between 1 to 49 inch.
                             </div>
                         </div>                                  
                     </div>
@@ -107,10 +107,10 @@
                     <div class="mb-3">
                         <label class="form-label"><h6>Length of Sleeve</h6></label>
                         <div class="input-group mb-3 has-validation">
-                            <input type="number" class="form-control" name="sleeve" required>
+                            <input type="number" class="form-control" name="sleeve" min="1" max="40" required>
                             <span class="input-group-text">inch</span>
                             <div class="invalid-feedback">
-                                Enter the sleeve length.
+                                Enter the sleeve length between 1 to 39 inch.
                             </div>
                         </div>                                  
                     </div>
@@ -147,7 +147,7 @@
             </tr>
             <tr>
                 <th class="border-0">Total </th>
-                <th class="border-0 text-end"></th>
+                <th class="border-0 text-end customize-total">0</th>
             </tr> 
         ';
 
@@ -160,10 +160,11 @@
         while($row=mysqli_fetch_assoc($result)){
             $id = $row['id'];
             $dress_category= $row['name'];
+            $x= str_replace(" ","-",$dress_category); // "str1 str2" = "str1-str2" doing this cause id can't have space
             $part2='
                 <tr>
                     <td>'.$dress_category.'</td>
-                    <td class="text-end" id="'.$id.'">00</td>
+                    <td class="text-end test" id="'.$x.'">0</td>
                 </tr>
             ';
             $table_data_list= $table_data_list . $part2;

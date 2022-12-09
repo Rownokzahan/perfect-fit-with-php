@@ -1,7 +1,7 @@
 $(document).ready(function () {
     displayData();
 }); 
-// display table data
+// display data
 function displayData(){
     const url_variable = window.location.search;
     $.ajax({
@@ -14,7 +14,8 @@ function displayData(){
             $('#customize-price-table').html(response.table_info);
 
             const price = $("#price").text();
-            $("#regular-price").text(price);
+            $(".regular-price").text(price);
+            $('.total-price').text( parseFloat(price) + parseFloat($(".delivery-price").text()));
         }
     })
 }
@@ -32,7 +33,19 @@ $('.customize-form').click(function(e){
         },
         success:function(data,status){
             const response = JSON.parse(data);
-            $('#'+response.id).text(response.price);
+            let category = response.category;
+            category = category.replace(' ','-'); //doing this cause id can't have space
+            $('#'+category).text(response.price);
+
+
+            let customize_total = 0;
+            $('.test').each(function(){
+                customize_total += parseFloat($(this).text());  // Or this.innerHTML, this.innerText
+            });
+            $('.customize-total').text(customize_total);
+
+            let total_price = parseFloat($(".regular-price").text()) + customize_total + parseFloat($(".delivery-price").text());
+            $('.total-price').text(total_price);
         }
     });
 });

@@ -186,17 +186,39 @@ span.input-group-text{
     background: #cb2475;
     color: white;
 }
-
+.price-update{
+    margin-bottom: 30px;
+}
 .price-update td{
     padding: 0;
 }
 
-/* @media only screen and (min-width: 1490px) {
+@media only screen and (min-width: 1490px) {
     .price-update {
         position: fixed;
         right: 0;
     }
-} */
+}
+
+.price-calculation{
+    color: black;
+    font-weight: 600;
+}
+.price-calculation th{
+    padding-right: 2px;
+    text-align: center;
+}
+
+.submit-btn{
+    border-radius: 14px;
+    margin: 20px 20px 0;
+}
+.submit-btn button{
+    width: 100%;
+    font-size: 25px;
+    font-weight: 600;
+    border-radius: 15px;
+}
 
 /*--------------------------------- order-page-------------------------------------------- */
 
