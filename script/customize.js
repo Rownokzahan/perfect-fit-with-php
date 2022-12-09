@@ -17,12 +17,6 @@ function displayData(){
             $(".regular-price").text(price);
             $('.total-price').text( parseFloat(price) + parseFloat($(".delivery-price").text()));
 
-
-            // $('input[name="length"]').on("input", function(e){
-            //     console.log($(e.target).val());
-            // });
-
-            //try area
             $( ".len-price" ).each(function(index) {
                 $(this).on("input", function(){
                     const length = $('input[name="length"]');
@@ -43,6 +37,16 @@ function displayData(){
                             $('#length-price').text(response.length_price);
                             $('#body-price').text(response.body_price);
                             $('#sleeve-price').text(response.sleeve_price);
+
+                            // setting prices according to customize item price
+                            let customize_total = 0;
+                            $('.test').each(function(){
+                                customize_total += parseFloat($(this).text());
+                            });
+                            
+                            $('.customize-total').text(customize_total);
+                            let total_price = parseFloat($(".regular-price").text()) + customize_total + parseFloat($(".delivery-price").text());
+                            $('.total-price').text(total_price);
                             
                         }
                     });

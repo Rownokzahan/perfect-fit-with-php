@@ -35,7 +35,7 @@
                 <div class="color-section row basic-box-style">
                     <h3>Select '.$dress_category.'</h3>
                     <div class="form-check col col-lg-2 needs-validation" novalidate>
-                        <label class="form-check-label" for="color1">
+                        <label class="form-check-label" for="'.$dress_category.'1">
                             <input class="form-check-input" type="radio" name="'.$dress_category.'" value="no-modification" id="'.$dress_category.'1" checked>
                             <img src="Perfect-fit-Images/customize/no-modification.png" alt="Option 1">
                             <p class=text-center>0 Taka</p>
