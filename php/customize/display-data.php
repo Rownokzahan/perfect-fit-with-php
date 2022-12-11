@@ -30,13 +30,14 @@
         $form_info="";
         while($row=mysqli_fetch_assoc($result)){
             $dress_category= $row['name'];
+            $newName = str_replace(" ","_",$dress_category);
     
             $part1 = '
-                <div class="color-section row basic-box-style">
+                <div class="row basic-box-style">
                     <h3>Select '.$dress_category.'</h3>
                     <div class="form-check col col-lg-2 needs-validation" novalidate>
                         <label class="form-check-label" for="'.$dress_category.'1">
-                            <input class="form-check-input" type="radio" name="'.$dress_category.'" value="no-modification" id="'.$dress_category.'1" checked>
+                            <input class="form-check-input" type="radio" name="'.$newName.'" value="no-modification" id="'.$dress_category.'1" checked>
                             <img src="Perfect-fit-Images/customize/no-modification.png" alt="Option 1">
                             <p class=text-center>0 Taka</p>
                         </label>
@@ -57,10 +58,9 @@
                 $customize_item ='    
                     <div class="form-check col col-lg-2 needs-validation" novalidate>
                         <label class="form-check-label" for="'.$dress_category.$num.'">
-                            <input class="form-check-input" type="radio" name="'.$dress_category.'" value="'.$name.'" id="'.$dress_category.$num.'">
+                            <input class="form-check-input" type="radio" name="'.$newName.'" value="'.$name.'" id="'.$dress_category.$num.'">
                             <img src="php/customize-item/images/'.$image.'" alt="Option '.$num.'">
                             <p class=text-center>'.$price.' Taka</p>
-                            <input type="hidden" value="'.$id.'">
                         </label>
                     </div>
                 ';

@@ -32,22 +32,10 @@ function displayData(){
                         },
                         success:function(data,status){
                             const response = JSON.parse(data);
-                            console.log(response.body_price);
-
                             $('#length-price').text(response.length_price);
                             $('#body-price').text(response.body_price);
                             $('#sleeve-price').text(response.sleeve_price);
-
-                            // setting prices according to customize item price
-                            let customize_total = 0;
-                            $('.test').each(function(){
-                                customize_total += parseFloat($(this).text());
-                            });
-                            
-                            $('.customize-total').text(customize_total);
-                            let total_price = parseFloat($(".regular-price").text()) + customize_total + parseFloat($(".delivery-price").text());
-                            $('.total-price').text(total_price);
-                            
+                            setPriceValue();                            
                         }
                     });
 
@@ -58,8 +46,15 @@ function displayData(){
 }
 
 $('.customize-form').click(function(e){
-    let customize_item_name=$(e.target).val()
+    let customize_item_name=$(e.target).val();
     if(customize_item_name==""){
+        return;
+    }
+    if(customize_item_name=="no-modification"){
+        let id=(e.target.id).replace(' ','-'); //doing this cause id can't have space
+        id = id.replace(1, ''); // removing 1 from the id
+        $('#'+id).text(00);
+        setPriceValue();
         return;
     }
     $.ajax({
@@ -71,18 +66,38 @@ $('.customize-form').click(function(e){
         success:function(data,status){
             const response = JSON.parse(data);
             let category = response.category;
-            category = category.replace(' ','-'); //doing this cause id can't have space
-            $('#'+category).text(response.price);
+            const id = category.replace(' ','-'); //doing this cause id can't have space
+            $('#'+id).text(response.price);
+            setPriceValue();
 
-            // setting prices according to customize item price
-            let customize_total = 0;
-            $('.test').each(function(){
-                customize_total += parseFloat($(this).text());
-            });
-            
-            $('.customize-total').text(customize_total);
-            let total_price = parseFloat($(".regular-price").text()) + customize_total + parseFloat($(".delivery-price").text());
-            $('.total-price').text(total_price);
         }
+    });
+});
+
+
+function setPriceValue(){
+    // setting prices according to customize item price
+    let customize_total = 0;
+    $('.test').each(function(){
+        customize_total += parseFloat($(this).text());
+    });
+    
+    $('.customize-total').text(customize_total);
+    let total_price = parseFloat($(".regular-price").text()) + customize_total + parseFloat($(".delivery-price").text());
+    $('.total-price').text(total_price);
+}
+
+$('#customize-form').on("submit",function(e){
+    e.preventDefault(); // preventing form from refreshing
+    $.ajax({
+        url: "php/customize/submit-form.php",
+        type: "POST",
+        data: new FormData(this),// using FromData class to send all data of from
+        contentType: false,
+        cache: false,
+        processData: false,
+        success: function (data, status) {            
+            console.log(data);
+        },
     });
 });
