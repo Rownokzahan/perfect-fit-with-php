@@ -89,15 +89,23 @@ function setPriceValue(){
 
 $('#customize-form').on("submit",function(e){
     e.preventDefault(); // preventing form from refreshing
+    const dress_name = $('#dress-name').text();
+    const dress_id = $('#dress-id').val();
+    const total_price= $('.total-price').text();
+    let form_data= new FormData(this);
+    form_data.append('dress_name', dress_name); 
+    form_data.append('dress_id', dress_id);
+    form_data.append('total_price', total_price);
     $.ajax({
         url: "php/customize/submit-form.php",
         type: "POST",
-        data: new FormData(this),// using FromData class to send all data of from
+        data: form_data,
         contentType: false,
         cache: false,
         processData: false,
         success: function (data, status) {            
-            console.log(data);
+            const id = JSON.parse(data);
+            location.href = "order.html?cusmize_id="+id;
         },
     });
 });

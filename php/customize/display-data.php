@@ -14,7 +14,8 @@
         $dress_info ='
             <div class="dress-info">
                 <img src="php/dress-item/images/'.$image.'" alt="" class="dress-img">
-                <h5>'.$name.'</h5>
+                <input id="dress-id" type="hidden" value="'.$id.'">
+                <h5 id="dress-name">'.$name.'</h5>
                 <h5><span id="price">'.$price.' </span> Taka</h5>
                 <p>'.$description.'</p>
             </div>
