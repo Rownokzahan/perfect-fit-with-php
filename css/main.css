@@ -254,9 +254,9 @@ span.input-group-text{
     box-shadow: 0 0 4px 0;
 }
 
-#confirm-modal a.btn.btn-primary{
-    width: min-content;
+#confirm-modal a{
     display: block;
-    position: relative;
-    right: 0;
+    width: min-content;
+    margin-left: auto;
+    margin-right: 20px;
 }
