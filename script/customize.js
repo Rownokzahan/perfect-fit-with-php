@@ -105,7 +105,7 @@ $('#customize-form').on("submit",function(e){
         processData: false,
         success: function (data, status) {            
             const id = JSON.parse(data);
-            location.href = "order.html?cusmize_id="+id;
+            location.href = "order.html?customize_id="+id+"&dress_name="+dress_name;
         },
     });
 });

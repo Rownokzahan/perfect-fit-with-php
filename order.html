@@ -21,9 +21,7 @@
         <div class="row">
             <div class="col">
                 <form id="order-form" class="needs-validation" novalidate>
-                    <input type="hidden" name="order-id" value="123004">
-                    <input type="hidden" name="total-price" value="1950">
-                    <div class="delivery-detail">                        
+                    <div class="delivery-detail">
                         <h4 class="text-center">Please Fill Up The Form Bellow</h4>
                         <div class="form-check">
                             <div class="mt-3">
@@ -127,13 +125,30 @@
                         <span id="delivery-date">04-12-2023</span>
                     </div>
                     <h2>Via Courier Service</h2>
-                    
+
                     <div class="submit-btn">
                         <button type="submit" form="order-form" class="btn btn-primary">Confirm Order</button>
                     </div>
                 </div>
             </div>
         </div>
+
+        <section class="confirm-modal">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirm-modal">
+                Launch static backdrop modal
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="confirm-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <a href="all-dresses.html" class="btn btn-primary">Okay</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer id="fornt-footer"></footer>
@@ -142,4 +157,5 @@
 <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
 <script src="script/home-page.js"></script>
 <script src="script/order-create.js"></script>
+
 </html>

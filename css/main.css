@@ -193,14 +193,17 @@ span.input-group-text{
     padding: 0;
 }
 
-@media only screen and (min-width: 1490px) {
+/* @media only screen and (min-width: 1490px) {
     .price-update {
         position: fixed;
         right: 0;
         top: 0;
     }
+} */
+.row1{
+    height: 660px;
+    overflow-y: scroll;
 }
-
 .price-calculation{
     color: black;
     font-weight: 600;
@@ -249,4 +252,11 @@ span.input-group-text{
     margin-top: 60px;
     padding: 10px 15px;
     box-shadow: 0 0 4px 0;
+}
+
+#confirm-modal a.btn.btn-primary{
+    width: min-content;
+    display: block;
+    position: relative;
+    right: 0;
 }

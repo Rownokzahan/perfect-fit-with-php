@@ -2,3 +2,20 @@
     JSON parse is related to this problem
 
 ## to see css changes Empty Cache and Hard Reload
+
+var num = 15;
+var a = num.toString();
+var b = num.toString(2);
+var c = num.toString(8);
+var d = num.toString(16);
+var e = num.toString(36);
+
+The result of a,b,c, and d will be:
+
+15
+1111
+17
+f
+f
+
+toString(36) method, 36 represents base 36. The toString(36) represents digits beyond 9 by letters.
