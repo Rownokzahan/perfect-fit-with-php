@@ -22,13 +22,16 @@
                     <thead>
                         <tr>
                             <th scope="col">SL No</th>
-                            <th scope="col">Order Id</th>
+                            <!-- <th scope="col">Order Id</th>
+                            <th scope="col">Customize Id</th> -->
                             <th scope="col">Total Price</th>
-                            <th scope="col">Customer Name</th>
-                            <th scope="col">Contact</th>
-                            <th scope="col">Delivery Address</th>
                             <th scope="col">Payment Method</th>
                             <th scope="col">Transaction ID</th>
+                            <!-- <th scope="col">Customer Name</th> -->
+                            <th scope="col">Contact</th>
+                            <!-- <th scope="col">Delivery Address</th> -->
+                            <th scope="col">Delivery Date</th>
+
                             <th scope="col">More</th>
                             <th scope="col">Status</th>
                         </tr>
@@ -94,174 +97,14 @@
                     </tbody>
                 </table>
             </div>
-
-
-            <!-- Modal For Order Details-->
-            <div class="modal fade" id="order-details" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Order Details</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="order-card">
-                                        <table class="table">
-                                            <h3>Order Information</h3>
-                                            <tbody>
-                                                <tr>
-                                                    <th>ID</b></th>
-                                                    <td>:</td>
-                                                    <td><span>G1237</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Payment Method</b></th>
-                                                    <td>:</td>
-                                                    <td><span>Bkash</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Transaction ID</b></th>
-                                                    <td>:</td>
-                                                    <td><span>s6ty89</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Price</b></th>
-                                                    <td>:</td>
-                                                    <td><span>1950</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Image</b></th>
-                                                    <td>:</td>
-                                                    <td><span>
-                                                        <img src="../Perfect-fit-Images/Dresses/Abaya/abaya2.jpg" alt="" width="100" height="100">
-                                                    </span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Order Date</b></th>
-                                                    <td>:</td>
-                                                    <td><span>28-12-2023</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Delivery Date</b></th>
-                                                    <td>:</td>
-                                                    <td><span>13-01-2023</span></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="order-card">
-                                        <table class="table">
-                                            <h3>Customer Information</h3>
-                                            <tbody>
-                                                <tr>
-                                                    <th>Name</b></th>
-                                                    <td>:</td>
-                                                    <td><span>Rownok Zahan</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Adress</b></th>
-                                                    <td>:</td>
-                                                    <td><span>Kalitola,Nilphamari</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Phone Number</b></th>
-                                                    <td>:</td>
-                                                    <td><span>01674374673</span></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="order-card">
-                                        <table class="table">
-                                            <h3>Dress Measurement</h3>
-                                            <tbody>
-                                                <tr>
-                                                    <th>Long</b></th>
-                                                    <td>:</td>
-                                                    <td><span>56</span> inch</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Body</b></th>
-                                                    <td>:</td>
-                                                    <td><span>38</span> inch</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Sleeve</b></th>
-                                                    <td>:</td>
-                                                    <td><span>23</span> inch</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="order-card">
-                                        <table class="table">
-                                            <h3>Customize Information</h3>
-                                            <tbody>
-                                                <tr>
-                                                    <th>Color</b></th>
-                                                    <td>:</td>
-                                                    <td><span>
-                                                        <img src="../Perfect-fit-Images/customize/color/green.png" alt="" width="100" height="100">
-                                                    </span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Fabric</b></th>
-                                                    <td>:</td>
-                                                    <td><span>
-                                                        <img src="../Perfect-fit-Images/customize/fabric/georget.png" alt="" width="100" height="100">
-                                                    </span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Neck</b></th>
-                                                    <td>:</td>
-                                                    <td><span>
-                                                        <img src="../Perfect-fit-Images/customize/neck/sweet-heart.png" alt="" width="100" height="100">
-                                                    </span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Sleeve</b></th>
-                                                    <td>:</td>
-                                                    <td><span>
-                                                        <img src="../Perfect-fit-Images/customize/sleeve/double-flounce.png" alt="" width="100" height="100">
-                                                    </span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Skirt</b></th>
-                                                    <td>:</td>
-                                                    <td><span>
-                                                        <img src="../Perfect-fit-Images/customize/skirt/box-pleated.png" alt="" width="100" height="100">
-                                                    </span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Waistband</b></th>
-                                                    <td>:</td>
-                                                    <td><span>
-                                                        <img src="../Perfect-fit-Images/customize/waist-band/with-waistband.png" alt="" width="100" height="100">
-                                                    </span></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </main>
-    </div>
-    
+    </div>   
     <footer>
         <p>© copyright 2022 by Rownok, all right reserved</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- custom js -->
 <script src="../script/home-page.js"></script>
 <script src="../script/order.js"></script>

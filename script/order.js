@@ -11,3 +11,7 @@ function displayData(){
         }
     })
 }
+
+function orderDetails(id){
+    location.href = 'order-details.html?order_id='+id;
+}

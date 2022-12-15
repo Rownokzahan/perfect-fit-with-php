@@ -45,7 +45,6 @@ function deleteUser(id){
     });
 }
 
-
 //get details
 function showDetails(id){
     $('#hidden').val(id);
@@ -61,8 +60,6 @@ function showDetails(id){
             $('select[name="category"]').val(data.category);
             $('input[name="product-price"]').val(data.price);
             $('input[name="description"]').val(data.description);
-            // $('input[name="product-image"]');
-            // var file = $('input[name="product-image"]');
         }
     })
 }

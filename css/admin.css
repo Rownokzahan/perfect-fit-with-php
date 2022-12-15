@@ -65,6 +65,7 @@ ul li a.nav-link i{
 }
 .table{
     width: max-content;
+    margin: auto;
 }
 
 .table-btn, .add-btn{
@@ -90,11 +91,20 @@ ul li a.nav-link i{
 /* ---------------------- order-detail page-------------- */
 
 .order-card{
-    box-shadow: 0 0 4px 0;
-    margin: 30px;
+    box-shadow: 0 0 2px 0;
+    margin-bottom: 20px;
     padding: 20px;
-    border-radius: 14px;
-    /* width: 50%; */
+    border-radius: 10px;
+    color: #cb2475;
+}
+
+.order-card .table{
+    margin: 20;
+    width: 90%;
+    color: #0f0234;
+}
+.order-card h4{
+    color: #16034d;
 }
 
 /* -------------- length cost page----------- */
