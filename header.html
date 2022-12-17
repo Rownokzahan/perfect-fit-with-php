@@ -33,7 +33,7 @@
 
 <!-- Modal For Login -->
 <section class="login-modal">
-    <div class="modal fade" id="login-modal" data-bs-keyboard="false" tabindex="-1"
+    <div class="modal" id="login-modal" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -147,12 +147,13 @@
                 </div>
 
                 <p class="text-center my-4">Already have an account? <a href="" data-bs-toggle="modal"
-                        data-bs-target="#login-modal">Login</a></p>
+                    data-bs-target="#login-modal">Login</a></p>
             </div>
         </div>
     </div>
 </section>
-
+<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
     $(document).ready(function (e) {
         $("#login-form").on('submit', (function (e) {
@@ -165,11 +166,24 @@
                 cache: false,
                 processData: false,
                 success: function (data, status) {
-                    $('#login-modal').hide();
-                    $('#logout-btn').css("display", "block");
+                    $('#login-modal').modal('hide');
                     $('#login-btn').css("display", "none");
+
+                    $('#logout-btn').css("display", "block");
+                    localStorage.setItem('isLoggedIn', true);
+                    window.location.reload();
                 },
             });
         }));
+    });
+
+    if (localStorage.getItem('isLoggedIn') === 'true'){
+        $('#logout-btn').css("display", "block");
+        $('#login-btn').css("display", "none");
+    }
+
+    $('#logout-btn').click(function() {
+        window.location = '/login';
+        localStorage.removeItem('isLoggedIn');
     });
 </script>
