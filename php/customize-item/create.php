@@ -12,12 +12,12 @@
         $folder = "./images/" . $image;
         move_uploaded_file($tempname, $folder);
 
-        if(!empty($name) && !empty($category) && !empty($price) && !empty($image)){
+        if(!empty($name) && !empty($category) && $price!=='' && !empty($image)){
 
             $sql = "insert into `customize-item` (name,category,price,image) values ('$name','$category','$price','$image')";
             $result =mysqli_query($con,$sql);
             if(!$result){
-                die(mysqli_error($result));
+                echo json_encode($mysqli->error);
             }else{
                 echo json_encode("Successfully Created");
             }  

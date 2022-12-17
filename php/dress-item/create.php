@@ -23,7 +23,7 @@
                 $sql = "insert into `dress-item` (name,category,price,description,image) values ('$name','$category','$price','$description','$image')";
                 $result =mysqli_query($con,$sql);
                 if(!$result){
-                    die(mysqli_error($result));
+                    echo json_encode($mysqli->error);
                 }else{
                     echo json_encode("Successfully Created");
                 }  

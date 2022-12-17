@@ -12,12 +12,12 @@
         $folder = "./images/" . $image;
         move_uploaded_file($tempname, $folder);
 
-        if(!empty($name) && !empty($category) && !empty($price) && !empty($image)){
+        if(!empty($name) && !empty($category) && $price!=='' && !empty($image)){
 
             $sql = "update `customize-item` set name='$name',category='$category', price='$price', image='$image'  where id=$id";
             $result =mysqli_query($con,$sql);
             if(!$result){
-                die(mysqli_error($result));
+                echo json_encode($mysqli->error);
             }else{
                 echo json_encode("Successfully Updated !");
             }  

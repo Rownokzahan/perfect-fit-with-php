@@ -19,7 +19,7 @@
             $sql = "insert into `orders` (`order_id`,`customize_id`, `total_price`, `payment_method`, `transaction_id`, `customer_name`, `phone`, `delivery_address`,`delivery_date`) values ('$order_id', '$customize_id', '$total_price', '$payment', '$transaction_id', '$name', '$phone', '$address','$delivery_date')";
             $result =mysqli_query($con,$sql);
             if(!$result){
-                die(mysqli_error($result));
+                echo json_encode($mysqli->error);
             }else{
                 echo json_encode("success");
             }  

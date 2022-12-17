@@ -18,7 +18,7 @@
             $sql = "update `dress-item` set name='$name',category='$category', price='$price', description='$description', image='$image'  where id=$id";
             $result =mysqli_query($con,$sql);
             if(!$result){
-                die(mysqli_error($result));
+                echo json_encode($mysqli->error);
             }else{
                 echo json_encode("Successfully Updated !");
             }  
