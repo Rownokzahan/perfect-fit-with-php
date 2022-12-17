@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perfect Fit</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="../css/bootsrap/bootstrap.css">
+    <link rel="stylesheet" href="../css/admin.css">
+
+    <!-- icon cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="d-flex">
+        <header id="admin-nav"></header>
+
+        <main class="col">
+            <div class="main-content">
+                <a class="add-btn" data-bs-toggle="modal" data-bs-target="#add-customize-item-modal">Add</a>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">SL No</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Image</th>
+                            <th scope="col">Operation</th>
+                        </tr>
+                    </thead>
+                    <tbody id="display-data-table">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Gown</td>
+                            <td>Gown</td>
+                            <td>1200</td>
+                            <td>
+                                <img src="../Perfect-fit-Images/Dresses/Abaya/abaya1.jpg" alt="" width="80" height="80">
+                            </td>
+                            <td>
+                                <div class="d-flex gap-3">
+                                    <a class="table-btn bg-warning" data-bs-toggle="modal"
+                                        data-bs-target="#update-customize-item-modal">Edit</a>
+                                    <a class="table-btn bg-danger">Delete</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Dress</td>
+                            <td>Dress</td>
+                            <td>1200</td>
+                            <td>
+                                <img src="../Perfect-fit-Images/Dresses/Abaya/abaya1.jpg" alt="" width="80" height="80">
+                            </td>
+                            <td>
+                                <div class="d-flex gap-3">
+                                    <a class="table-btn bg-warning" data-bs-toggle="modal"
+                                        data-bs-target="#update-customize-item-modal">Edit</a>
+                                    <a class="table-btn bg-danger">Delete</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Dress</td>
+                            <td>Dress</td>
+                            <td>1200</td>
+                            <td>
+                                <img src="../Perfect-fit-Images/Dresses/Abaya/abaya1.jpg" alt="" width="80" height="80">
+                            </td>
+                            <td>
+                                <div class="d-flex gap-3">
+                                    <a class="table-btn bg-warning" data-bs-toggle="modal"
+                                        data-bs-target="#update-customize-item-modal">Edit</a>
+                                    <a class="table-btn bg-danger">Delete</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <!-- Modal For Adding Dress-->
+            <div class="modal fade" id="add-customize-item-modal" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Add New Product</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="message">
+                                <p id="create-message" class="text-center text-warning"></p>
+                            </div>
+                            <form class="needs-validation" id="add-customize-item-form" novalidate>
+                                <div>
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" name="name" required>
+                                    <div class="invalid-feedback">
+                                        Please Enter Name!
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="category" class="form-label">Select Customize Category</label>
+                                    <select class="form-select customize-category" name="category" required>
+                                        <option selected disabled value="">Choose A Category</option>
+                                        <option>Color</option>
+                                        <option>Fabric</option>
+                                        <option>Neck Design</option>
+                                        <option>Sleeve Design</option>
+                                        <option>Skirt Design</option>
+                                        <option>Waistband</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please select a valid category.
+                                    </div>
+                                </div>
+                                <div id="customize-category">
+
+                                </div>
+                                <div>
+                                    <label for="price" class="form-label">Price</label>
+                                    <input type="text" class="form-control" name="price" required>
+                                    <div class="invalid-feedback">
+                                        Please Enter Customize Price!
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="image" class="form-label">Image</label>
+                                    <input type="file" class="form-control" name="image" required>
+                                    <div class="invalid-feedback">
+                                        Please Enter Customize Item Image.
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                        <div class="text-end m-4">
+                            <button type="submit" form="add-customize-item-form" class="btn btn-primary">Create</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal For Update-->
+            <div class="modal fade" id="update-customize-item-modal" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Edit Product</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="message">
+                                <p id="update-message" class="text-center text-warning"></p>
+                            </div>
+                            <form class="needs-validation" id="update-customize-item-form" novalidate>
+
+                                <div>
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" name="name" required>
+                                    <div class="invalid-feedback">
+                                        Please Enter Name!
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="category" class="form-label">Select Customize Category</label>
+                                    <select class="form-select customize-category" name="category">
+                                        <option selected disabled value="">Choose A Category</option>
+                                        <option>Color</option>
+                                        <option>Fabric</option>
+                                        <option>Neck Design</option>
+                                        <option>Sleeve Design</option>
+                                        <option>Skirt Design</option>
+                                        <option>Waistband</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please select a valid category.
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="price" class="form-label">Price</label>
+                                    <input type="text" class="form-control" name="price" required>
+                                    <div class="invalid-feedback">
+                                        Please Enter Customize Price!
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="image" class="form-label">Image</label>
+                                    <input type="file" class="form-control" name="image" required>
+                                    <div class="invalid-feedback">
+                                        Please Enter Customize Item Image.
+                                    </div>
+                                </div>
+
+                                <input type="hidden" id="hidden" name="id">
+                            </form>
+                        </div>
+                        <div class="text-end m-4">
+                            <button type="submit" form="update-customize-item-form"
+                                class="btn btn-warning">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>© copyright 2022 by Rownok, all right reserved</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+<!-- custom js -->
+<script src="../script/home-page.js"></script>
+<script src="../script/customize-item.js"></script>
+
+</html>

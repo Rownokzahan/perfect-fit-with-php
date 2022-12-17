@@ -13,7 +13,7 @@
                 $sql = "update `dress-category` set name='$name' where id=$id";
                 $result =mysqli_query($con,$sql);
                 if(!$result){
-                    die(mysqli_error($result));
+                    echo json_encode($mysqli->error);
                 }else{
                     echo json_encode("Successfully Updated !");
                 }  

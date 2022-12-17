@@ -7,7 +7,9 @@ function displayData(){
         url:"../php/dress-item/display-data.php",
         type:"post",
         success:function(data,status){
-            $('#display-data-table').html(data);
+            const response = JSON.parse(data)
+            $('#display-data-table').html(response.table_body);
+            $('.dress-category').html(response.option_list)
         }
     })
 }
@@ -43,7 +45,6 @@ function deleteUser(id){
     });
 }
 
-
 //get details
 function showDetails(id){
     $('#hidden').val(id);
@@ -59,8 +60,6 @@ function showDetails(id){
             $('select[name="category"]').val(data.category);
             $('input[name="product-price"]').val(data.price);
             $('input[name="description"]').val(data.description);
-            // $('input[name="product-image"]');
-            // var file = $('input[name="product-image"]');
         }
     })
 }

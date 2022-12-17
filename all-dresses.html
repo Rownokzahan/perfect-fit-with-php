@@ -15,115 +15,285 @@
 <body>
     <header id="fornt-nav"></header>
     <main>
-        <section class="all-dresses-list">
-            <div class="dress-category">
-                <h2 class="dress-category-name">Abaya</h2>
-                <div class="line"></div>
-                <div class="row">
-                    <div class="col">
-                        <div class="dress-item">
-                            <img src="Perfect-fit-Images/Dresses/Abaya/abaya1.jpg" class="card-img-top" alt="...">
-                            <div class="item-body">
-                                <h5 class="item-name">Dress Name</h5>
-                                <p class="">$ <span id="dress-price">1200</span></p>
-                            </div>
-                            <a href="customize.html" class="btn btn-primary"><i class="bi bi-bag-heart-fill"></i> Buy
-                                Now</a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="dress-item">
-                            <img src="Perfect-fit-Images/Dresses/Abaya/abaya2.jpg" class="card-img-top" alt="...">
-                            <div class="item-body">
-                                <h5 class="item-name">Dress Name</h5>
-                                <p class="">$ <span id="dress-price">1200</span></p>
-                            </div>
-                            <a href="customize.html" class="btn btn-primary"><i class="bi bi-bag-heart-fill"></i> Buy
-                                Now</a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="dress-item">
-                            <img src="Perfect-fit-Images/Dresses/Abaya/abaya3.jpg" class="card-img-top" alt="...">
-                            <div class="item-body">
-                                <h5 class="item-name">Dress Name</h5>
-                                <p class="">$ <span id="dress-price">1200</span></p>
-                            </div>
-                            <a href="customize.html" class="btn btn-primary"><i class="bi bi-bag-heart-fill"></i> Buy
-                                Now</a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="dress-item">
-                            <img src="Perfect-fit-Images/Dresses/Abaya/abaya1.jpg" class="card-img-top" alt="...">
-                            <div class="item-body">
-                                <h5 class="item-name">Dress Name</h5>
-                                <p class="">$ <span id="dress-price">1200</span></p>
-                            </div>
-                            <a href="customize.html" class="btn btn-primary"><i class="bi bi-bag-heart-fill"></i> Buy
-                                Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        <section class="all-dresses-list" id="all-dress-list">
             <div class="dress-category">
                 <h2 class="dress-category-name">Gown</h2>
                 <div class="line"></div>
                 <div class="row">
+
                     <div class="col">
                         <div class="dress-item">
-                            <img src="Perfect-fit-Images/Dresses/Abaya/abaya1.jpg" class="card-img-top" alt="...">
+                            <img src="php/dress-item/images/abaya1.jpg" class="card-img-top" alt="...">
                             <div class="item-body">
-                                <h5 class="item-name">Dress Name</h5>
-                                <p class="">$ <span id="dress-price">1200</span></p>
+                                <h5 class="item-name">Beautiful Gown</h5>
+                                <p class="">$ <span id="dress-price">1900</span></p>
                             </div>
-                            <a href="customize.html" class="btn btn-primary"><i class="bi bi-bag-heart-fill"></i> Buy
-                                Now</a>
+                            <div class="d-flex justify-content-evenly pb-3">
+                                <button onclick="customize(9)" class="btn btn-secondary">
+                                    <i class="bi bi-heart-fill"></i> Favourite
+                                </button>
+                                <button onclick="customize(9)" class="btn btn-primary">
+                                    <i class="bi bi-bag-heart-fill"></i> Buy Now
+                                </button>
+                            </div>
                         </div>
                     </div>
+
+
                     <div class="col">
                         <div class="dress-item">
-                            <img src="Perfect-fit-Images/Dresses/Abaya/abaya2.jpg" class="card-img-top" alt="...">
+                            <img src="php/dress-item/images/gown2.jpg" class="card-img-top" alt="...">
                             <div class="item-body">
-                                <h5 class="item-name">Dress Name</h5>
-                                <p class="">$ <span id="dress-price">1200</span></p>
+                                <h5 class="item-name">Floral Printed</h5>
+                                <p class="">$ <span id="dress-price">2000</span></p>
                             </div>
-                            <a href="customize.html" class="btn btn-primary"><i class="bi bi-bag-heart-fill"></i> Buy
-                                Now</a>
+                            <div class="d-flex justify-content-evenly pb-3">
+                                <button onclick="customize(14)" class="btn btn-secondary">
+                                    <i class="bi bi-heart-fill"></i> Favourite
+                                </button>
+                                <button onclick="customize(14)" class="btn btn-primary">
+                                    <i class="bi bi-bag-heart-fill"></i> Buy Now
+                                </button>
+                            </div>
                         </div>
                     </div>
+
+
                     <div class="col">
                         <div class="dress-item">
-                            <img src="Perfect-fit-Images/Dresses/Abaya/abaya3.jpg" class="card-img-top" alt="...">
+                            <img src="php/dress-item/images/Gorgeous Black Party Gown.jpg" class="card-img-top" alt="...">
                             <div class="item-body">
-                                <h5 class="item-name">Dress Name</h5>
-                                <p class="">$ <span id="dress-price">1200</span></p>
+                                <h5 class="item-name">Gorgeous Black Party Gown</h5>
+                                <p class="">$ <span id="dress-price">4000</span></p>
                             </div>
-                            <a href="customize.html" class="btn btn-primary"><i class="bi bi-bag-heart-fill"></i> Buy
-                                Now</a>
+                            <div class="d-flex justify-content-evenly pb-3">
+                                <button onclick="customize(17)" class="btn btn-secondary">
+                                    <i class="bi bi-heart-fill"></i> Favourite
+                                </button>
+                                <button onclick="customize(17)" class="btn btn-primary">
+                                    <i class="bi bi-bag-heart-fill"></i> Buy Now
+                                </button>
+                            </div>
                         </div>
                     </div>
+
+
                     <div class="col">
                         <div class="dress-item">
-                            <img src="Perfect-fit-Images/Dresses/Abaya/abaya1.jpg" class="card-img-top" alt="...">
+                            <img src="php/dress-item/images/Black Party Gown.jpg" class="card-img-top" alt="...">
                             <div class="item-body">
-                                <h5 class="item-name">Dress Name</h5>
-                                <p class="">$ <span id="dress-price">1200</span></p>
+                                <h5 class="item-name">Black Party Gown.</h5>
+                                <p class="">$ <span id="dress-price">2500</span></p>
                             </div>
-                            <a href="customize.html" class="btn btn-primary"><i class="bi bi-bag-heart-fill"></i> Buy
-                                Now</a>
+                            <div class="d-flex justify-content-evenly pb-3">
+                                <button onclick="customize(18)" class="btn btn-secondary">
+                                    <i class="bi bi-heart-fill"></i> Favourite
+                                </button>
+                                <button onclick="customize(18)" class="btn btn-primary">
+                                    <i class="bi bi-bag-heart-fill"></i> Buy Now
+                                </button>
+                            </div>
                         </div>
                     </div>
+
+
+                </div>
+            </div>
+
+            <div class="dress-category">
+                <h2 class="dress-category-name">Dress</h2>
+                <div class="line"></div>
+                <div class="row">
+
+                    <div class="col">
+                        <div class="dress-item">
+                            <img src="php/dress-item/images/abaya3.jpg" class="card-img-top" alt="...">
+                            <div class="item-body">
+                                <h5 class="item-name">Printed Dress</h5>
+                                <p class="">$ <span id="dress-price">1200</span></p>
+                            </div>
+                            <div class="d-flex justify-content-evenly pb-3">
+                                <button onclick="customize(10)" class="btn btn-secondary">
+                                    <i class="bi bi-heart-fill"></i> Favourite
+                                </button>
+                                <button onclick="customize(10)" class="btn btn-primary">
+                                    <i class="bi bi-bag-heart-fill"></i> Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="dress-item">
+                            <img src="php/dress-item/images/abaya2.jpg" class="card-img-top" alt="...">
+                            <div class="item-body">
+                                <h5 class="item-name">Yellow Dress</h5>
+                                <p class="">$ <span id="dress-price">890</span></p>
+                            </div>
+                            <div class="d-flex justify-content-evenly pb-3">
+                                <button onclick="customize(13)" class="btn btn-secondary">
+                                    <i class="bi bi-heart-fill"></i> Favourite
+                                </button>
+                                <button onclick="customize(13)" class="btn btn-primary">
+                                    <i class="bi bi-bag-heart-fill"></i> Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="dress-item">
+                            <img src="php/dress-item/images/Dress1.jpg" class="card-img-top" alt="...">
+                            <div class="item-body">
+                                <h5 class="item-name">Light Pink Simple Dress</h5>
+                                <p class="">$ <span id="dress-price">1200</span></p>
+                            </div>
+                            <div class="d-flex justify-content-evenly pb-3">
+                                <button onclick="customize(15)" class="btn btn-secondary">
+                                    <i class="bi bi-heart-fill"></i> Favourite
+                                </button>
+                                <button onclick="customize(15)" class="btn btn-primary">
+                                    <i class="bi bi-bag-heart-fill"></i> Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="dress-item">
+                            <img src="php/dress-item/images/maxi dress.jpg" class="card-img-top" alt="...">
+                            <div class="item-body">
+                                <h5 class="item-name">Summer Maxi Dress</h5>
+                                <p class="">$ <span id="dress-price">1900</span></p>
+                            </div>
+                            <div class="d-flex justify-content-evenly pb-3">
+                                <button onclick="customize(16)" class="btn btn-secondary">
+                                    <i class="bi bi-heart-fill"></i> Favourite
+                                </button>
+                                <button onclick="customize(16)" class="btn btn-primary">
+                                    <i class="bi bi-bag-heart-fill"></i> Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="dress-category">
+                <h2 class="dress-category-name">Abaya</h2>
+                <div class="line"></div>
+                <div class="row">
+
+                    <div class="col">
+                        <div class="dress-item">
+                            <img src="php/dress-item/images/Simple Abaya.jpg" class="card-img-top" alt="...">
+                            <div class="item-body">
+                                <h5 class="item-name">Simple Abaya</h5>
+                                <p class="">$ <span id="dress-price">1700</span></p>
+                            </div>
+                            <div class="d-flex justify-content-evenly pb-3">
+                                <button onclick="customize(19)" class="btn btn-secondary">
+                                    <i class="bi bi-heart-fill"></i> Favourite
+                                </button>
+                                <button onclick="customize(19)" class="btn btn-primary">
+                                    <i class="bi bi-bag-heart-fill"></i> Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="dress-item">
+                            <img src="php/dress-item/images/Irani Borkha.jpg" class="card-img-top" alt="...">
+                            <div class="item-body">
+                                <h5 class="item-name">Irani Borkha</h5>
+                                <p class="">$ <span id="dress-price">1400</span></p>
+                            </div>
+                            <div class="d-flex justify-content-evenly pb-3">
+                                <button onclick="customize(20)" class="btn btn-secondary">
+                                    <i class="bi bi-heart-fill"></i> Favourite
+                                </button>
+                                <button onclick="customize(20)" class="btn btn-primary">
+                                    <i class="bi bi-bag-heart-fill"></i> Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="dress-item">
+                            <img src="php/dress-item/images/Dark Beauty Borkha.jpg" class="card-img-top" alt="...">
+                            <div class="item-body">
+                                <h5 class="item-name">Dark Beauty Borkha</h5>
+                                <p class="">$ <span id="dress-price">2300</span></p>
+                            </div>
+                            <div class="d-flex justify-content-evenly pb-3">
+                                <button onclick="customize(21)" class="btn btn-secondary">
+                                    <i class="bi bi-heart-fill"></i> Favourite
+                                </button>
+                                <button onclick="customize(21)" class="btn btn-primary">
+                                    <i class="bi bi-bag-heart-fill"></i> Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="dress-item">
+                            <img src="php/dress-item/images/Unique Style Abaya.jpg" class="card-img-top" alt="...">
+                            <div class="item-body">
+                                <h5 class="item-name">Unique Style Abaya</h5>
+                                <p class="">$ <span id="dress-price">2500</span></p>
+                            </div>
+                            <div class="d-flex justify-content-evenly pb-3">
+                                <button onclick="customize(22)" class="btn btn-secondary">
+                                    <i class="bi bi-heart-fill"></i> Favourite
+                                </button>
+                                <button onclick="customize(22)" class="btn btn-primary">
+                                    <i class="bi bi-bag-heart-fill"></i> Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="dress-item">
+                            <img src="php/dress-item/images/Elegant Black Borkha.jpg" class="card-img-top" alt="...">
+                            <div class="item-body">
+                                <h5 class="item-name">Elegant Black Borkha</h5>
+                                <p class="">$ <span id="dress-price">2100</span></p>
+                            </div>
+                            <div class="d-flex justify-content-evenly pb-3">
+                                <button onclick="customize(23)" class="btn btn-secondary">
+                                    <i class="bi bi-heart-fill"></i> Favourite
+                                </button>
+                                <button onclick="customize(23)" class="btn btn-primary">
+                                    <i class="bi bi-bag-heart-fill"></i> Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </section>
     </main>
 
     <footer id="fornt-footer"></footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script/home-page.js"></script>
+<script src="script/all-dresses.js"></script>
 
 </html>

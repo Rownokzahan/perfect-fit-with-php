@@ -123,22 +123,20 @@ footer p.copyright{
     box-shadow: 0 0 6px 0;
     background-color: #fff;
     border-radius: 15px;
-    width: 284px;
+    width: 286px;
     height: auto;
     margin-top: 20px;
 }
 .dress-item img{
     width: 100%;
-    height: 300px;
+    object-fit: contain;
+    aspect-ratio: 5/4;
     border-radius: 11px 11px 0 0;
     margin-bottom: 10px ;
 }
 .item-body{
     padding-left:20px ;
     color:  rgb(50, 4, 4);
-}
-.dress-item a.btn.btn-primary{
-    width: 100%;
 }
 
 
@@ -161,7 +159,7 @@ footer p.copyright{
 }
 .dress-img{
     width: 266px;
-    height: 327px;
+    height: auto;
     border-radius: 12px;
     margin: 20px 0;
 }
@@ -177,7 +175,7 @@ div.form-check.col{
 }
 input[type=radio]{ 
     position: relative;
-    bottom: -120px;
+    bottom: -140px;
     left: 70px;
 }  
 input+img {
@@ -188,14 +186,42 @@ span.input-group-text{
     background: #cb2475;
     color: white;
 }
+.price-update{
+    margin-bottom: 30px;
+}
+.price-update td{
+    padding: 0;
+}
 
-@media only screen and (min-width: 1490px) {
+/* @media only screen and (min-width: 1490px) {
     .price-update {
         position: fixed;
         right: 0;
-        bottom: 130px;
-        line-height: 0;
+        top: 0;
     }
+} */
+.row1{
+    height: 660px;
+    overflow-y: scroll;
+}
+.price-calculation{
+    color: black;
+    font-weight: 600;
+}
+.price-calculation th{
+    padding-right: 2px;
+    text-align: center;
+}
+
+.submit-btn{
+    border-radius: 14px;
+    margin: 20px 20px 0;
+}
+.submit-btn button{
+    width: 100%;
+    font-size: 25px;
+    font-weight: 600;
+    border-radius: 15px;
 }
 
 /*--------------------------------- order-page-------------------------------------------- */
@@ -226,4 +252,11 @@ span.input-group-text{
     margin-top: 60px;
     padding: 10px 15px;
     box-shadow: 0 0 4px 0;
+}
+
+#confirm-modal a{
+    display: block;
+    width: min-content;
+    margin-left: auto;
+    margin-right: 20px;
 }

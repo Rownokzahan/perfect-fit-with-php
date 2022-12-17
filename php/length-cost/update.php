@@ -7,7 +7,7 @@
         $to= $_POST['to'];
         $rate= $_POST['rate'];
         
-        if(!empty($category) && !empty($from) && !empty($to) && !empty($rate)){
+        if(!empty($category) && $from!=='' && $to!=='' && $rate!==''){
             $sql = "UPDATE `length-cost` SET `category`='$category', `from` = '$from', `to` = '$to', `rate` = '$rate' WHERE `length-cost`.`id` = $id";
             $result =mysqli_query($con,$sql);
             if($result){
