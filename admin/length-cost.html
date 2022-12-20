@@ -14,66 +14,61 @@
 </head>
 
 <body>
-    <div class="d-flex">
-        <header id="admin-nav"></header>
-        <main class="col d-flex justify-content-center mt-4">
-            <div class="">
-                <h3 class="mb-3 text-center">Increase Price Length Wise </h3>
-                <a class="table-btn bg-primary" data-bs-toggle="modal" data-bs-target="#add-inch-modal">Add</a>
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">SL No</th>
-                            <th scope="col">Category</th>
-                            <th scope="col">From inch</th>
-                            <th scope="col">To inch</th>
-                            <th scope="col">Rate</th>
-                            <th scope="col">Operation</th>
-                        </tr>
-                    </thead>
-                    <tbody id="display-data-table">
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Dress Length</td>
-                            <td>0</td>
-                            <td>25</td>
-                            <td>0</td>
-                            <td class="d-flex gap-3">
-                                <a class="table-btn bg-warning" data-bs-toggle="modal"
-                                    data-bs-target="#update-inch-modal">Edit</a>
-                                <a class="table-btn bg-danger">Delete</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Body Length</td>
-                            <td>0</td>
-                            <td>25</td>
-                            <td>0</td>
-                            <td class="d-flex gap-3">
-                                <a class="table-btn bg-warning" data-bs-toggle="modal"
-                                    data-bs-target="#update-inch-modal">Edit</a>
-                                <a class="table-btn bg-danger">Delete</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Sleeve Length</td>
-                            <td>0</td>
-                            <td>25</td>
-                            <td>0</td>
-                            <td class="d-flex gap-3">
-                                <a class="table-btn bg-warning" data-bs-toggle="modal"
-                                    data-bs-target="#update-inch-modal">Edit</a>
-                                <a class="table-btn bg-danger">Delete</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </main>
-    </div>
-
+    <main>       
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th style="border: none;"><button class="table-btn bg-primary" data-bs-toggle="modal" data-bs-target="#add-inch-modal">Add</button></th>
+                </tr>
+                <tr>
+                    <th scope="col">SL No</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">From inch</th>
+                    <th scope="col">To inch</th>
+                    <th scope="col">Rate</th>
+                    <th scope="col">Operation</th>
+                </tr>
+            </thead>
+            <tbody id="display-data-table">
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Dress Length</td>
+                    <td>0</td>
+                    <td>25</td>
+                    <td>0</td>
+                    <td class="d-flex gap-3">
+                        <a class="table-btn bg-warning" data-bs-toggle="modal"
+                            data-bs-target="#update-inch-modal">Edit</a>
+                        <a class="table-btn bg-danger">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Body Length</td>
+                    <td>0</td>
+                    <td>25</td>
+                    <td>0</td>
+                    <td class="d-flex gap-3">
+                        <a class="table-btn bg-warning" data-bs-toggle="modal"
+                            data-bs-target="#update-inch-modal">Edit</a>
+                        <a class="table-btn bg-danger">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Sleeve Length</td>
+                    <td>0</td>
+                    <td>25</td>
+                    <td>0</td>
+                    <td class="d-flex gap-3">
+                        <a class="table-btn bg-warning" data-bs-toggle="modal"
+                            data-bs-target="#update-inch-modal">Edit</a>
+                        <a class="table-btn bg-danger">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
 
     <!-- Modal For Adding Dress-Length-Price -->
     <div class="modal fade" id="add-inch-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -86,7 +81,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="message">
-                        <p  id="create-message" class="text-center text-warning"></p>
+                        <p id="create-message" class="text-center text-warning"></p>
                     </div>
                     <form action="" id="add-inch-form" class="needs-validation" novalidate>
                         <div class="form-check">
@@ -169,7 +164,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="message">
-                        <p  id="update-message" class="text-center text-warning"></p>
+                        <p id="update-message" class="text-center text-warning"></p>
                     </div>
                     <form action="" id="update-inch-form" class="needs-validation" novalidate>
                         <div class="form-check">
@@ -245,9 +240,9 @@
     <footer>
         <p>© copyright 2022 by Rownok, all right reserved</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- custom js -->
 <script src="../script/home-page.js"></script>
 <script src="../script/length-cost.js"></script>

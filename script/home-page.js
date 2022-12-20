@@ -21,5 +21,8 @@ $(function(){
 
 //-----------adding Header to every admin-----------
 $(function(){
-    $("#admin-nav").load("header.html"); 
+    $.get("header.html", function(data) {
+        var htmlContent = data;
+        $("body").prepend(data);
+    });
 });
