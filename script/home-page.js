@@ -13,13 +13,17 @@
     })
 })()
 
-//-----------adding Header and Footer to every front-----------
+//-----------adding Header to every admin page and front page-----------
 $(function(){
-    $("#fornt-nav").load("header.html"); 
+    $.get("header.html", function(data) {  //there are two header.html file one for admin one for front end
+        var htmlContent = data;
+        $("body").prepend(data);
+    });
+});
+
+//-----------adding Footer to every front-----------
+$(function(){
     $("#fornt-footer").load("footer.html"); 
 });
 
-//-----------adding Header to every admin-----------
-$(function(){
-    $("#admin-nav").load("header.html"); 
-});
+

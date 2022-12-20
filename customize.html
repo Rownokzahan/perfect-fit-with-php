@@ -13,29 +13,108 @@
 </head>
 
 <body>
-    <header id="fornt-nav"></header>
-    <main  class="overflow-hidden">
+    <main class="overflow-hidden">
         <div class="title">
             <h1>Customize Your Dress</h1>
         </div>
 
-        <div class="d-flex">
-            <div class="col-lg-8 row1">
+        <div class="main-content">
+            <div class="price-update basic-box-style">
+                <div class="box-style">
+                    <h5>Regular Price </h5>
+                    <span class="regular-price">1200</span>
+                </div>
+
+                <div class="box-style">
+                    <table class="table" id="customize-price-table">
+                        <tr>
+                            <th>Category</th>
+                            <th class="text-end">Price</th>
+                        </tr>
+                        <tr>
+                            <td>Fabric</td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <td>Neck Design</td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <td>Sleeve Design</td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <td>Waist Design</td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <td>Waistband</td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <td>Length of Dress</td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <td>Length of Body </td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <td>Length of Sleeve</td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th class="border-0">Total </th>
+                            <th class="border-0 text-end"></th>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="box-style">
+                    <table class="price-calculation">
+                        <tr>
+                            <td>Total Price</th>
+                            <td>=</th>
+                            <td>Price</th>
+                            <td>+</th>
+                            <td>Customization</th>
+                            <td>+</th>
+                            <td>Delivery</th>
+                        </tr>
+                        <tr>
+                            <th class="total-price"></th>
+                            <th>=</th>
+                            <th class="regular-price"></th>
+                            <th>+</th>
+                            <th class="customize-total">0</th>
+                            <th>+</th>
+                            <th class="delivery-price">100</th>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="submit-btn">
+                    <button type="submit" form="customize-form" class="btn btn-primary">Order Now</button>
+                </div>
+            </div>
+            <div class="customize-details">
                 <div class="basic-box-style ps-5" id="dress-info">
                     <h3 class="dress-name"><span id="dress-name">Dress Name</span></h3>
                     <img src="Perfect-fit-Images/Dresses/Abaya/abaya1.jpg" alt="" class="dress-img">
                     <h5><span id="price">1200</span> Taka</h5>
                     <h5>Description:</h5>
-                    <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dolorum debitis alias officiis vel magni.</p>
+                    <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dolorum debitis alias
+                        officiis vel magni.</p>
                 </div>
 
                 <form id="customize-form" class="needs-validation customize-form" novalidate>
 
                     <div class="color-section row basic-box-style">
-                        <h3>Select Color</h3> 
+                        <h3>Select Color</h3>
                         <div class="form-check col col-lg-2 needs-validation" novalidate>
                             <label class="form-check-label" for="color1">
-                                <input class="form-check-input" type="radio" name="color" value="no-modification" id="color1" checked>
+                                <input class="form-check-input" type="radio" name="color" value="no-modification"
+                                    id="color1" checked>
                                 <img src="Perfect-fit-Images/customize/no-modification.png" alt="Option 1">
                             </label>
                         </div>
@@ -44,32 +123,33 @@
                                 <input class="form-check-input" type="radio" name="color" value="black" id="color2">
                                 <img src="Perfect-fit-Images/customize/color/black.png" alt="Option 2">
                             </label>
-                        </div> 
+                        </div>
                         <div class="form-check col col-lg-2">
                             <label class="form-check-label" for="color3">
                                 <input class="form-check-input" type="radio" name="color" value="yellow" id="color3">
                                 <img src="Perfect-fit-Images/customize/color/yelow.png" alt="Option 2">
                             </label>
-                        </div> 
+                        </div>
                         <div class="form-check col col-lg-2">
                             <label class="form-check-label" for="color4">
                                 <input class="form-check-input" type="radio" name="color" value="green" id="color4">
                                 <img src="Perfect-fit-Images/customize/color/green.png" alt="Option 2">
                             </label>
-                        </div> 
+                        </div>
                         <div class="form-check col col-lg-2">
                             <label class="form-check-label" for="color5">
                                 <input class="form-check-input" type="radio" name="color" value="blue" id="color5">
                                 <img src="Perfect-fit-Images/customize/color/blue.png" alt="Option 2">
                             </label>
-                        </div> 
+                        </div>
                     </div>
 
                     <div class="fabric-section row basic-box-style">
-                        <h3>Select Fabric</h3> 
+                        <h3>Select Fabric</h3>
                         <div class="form-check col col-lg-2">
                             <label class="form-check-label" for="fabric1">
-                                <input class="form-check-input" type="radio" name="fabric" value="no-modification" id="fabric1" checked>
+                                <input class="form-check-input" type="radio" name="fabric" value="no-modification"
+                                    id="fabric1" checked>
                                 <img src="Perfect-fit-Images/customize/no-modification.png" alt="Option 1">
                             </label>
                         </div>
@@ -78,38 +158,39 @@
                                 <input class="form-check-input" type="radio" name="fabric" value="cotton" id="fabric2">
                                 <img src="Perfect-fit-Images/customize/fabric/cotton.png" alt="Option 2">
                             </label>
-                        </div> 
+                        </div>
                         <div class="form-check col col-lg-2">
                             <label class="form-check-label" for="fabric3">
                                 <input class="form-check-input" type="radio" name="fabric" value="chiffon" id="fabric3">
                                 <img src="Perfect-fit-Images/customize/fabric/chiffon.png" alt="Option 2">
                             </label>
-                        </div> 
+                        </div>
                         <div class="form-check col col-lg-2">
                             <label class="form-check-label" for="fabric4">
                                 <input class="form-check-input" type="radio" name="fabric" value="cherry" id="fabric4">
                                 <img src="Perfect-fit-Images/customize/fabric/cherry.png" alt="Option 2">
                             </label>
-                        </div> 
+                        </div>
                         <div class="form-check col col-lg-2">
                             <label class="form-check-label" for="fabric5">
                                 <input class="form-check-input" type="radio" name="fabric" value="slilk" id="fabric5">
                                 <img src="Perfect-fit-Images/customize/fabric/slilk.png" alt="Option 2">
                             </label>
-                        </div> 
+                        </div>
                         <div class="form-check col col-lg-2">
                             <label class="form-check-label" for="fabric6">
                                 <input class="form-check-input" type="radio" name="fabric" value="georget" id="fabric6">
                                 <img src="Perfect-fit-Images/customize/fabric/georget.png" alt="Option 2">
                             </label>
-                        </div> 
+                        </div>
                     </div>
-                    
+
                     <div class="neck-section row basic-box-style">
-                        <h3>Select Neck Design</h3> 
+                        <h3>Select Neck Design</h3>
                         <div class="form-check col col-lg-2">
                             <label class="form-check-label" for="neck1">
-                                <input class="form-check-input" type="radio" name="neck" value="no-modification" id="neck1" checked>
+                                <input class="form-check-input" type="radio" name="neck" value="no-modification"
+                                    id="neck1" checked>
                                 <img src="Perfect-fit-Images/customize/no-modification.png" alt="Option 1">
                             </label>
                         </div>
@@ -118,38 +199,39 @@
                                 <input class="form-check-input" type="radio" name="neck" value="v-neck" id="neck2">
                                 <img src="Perfect-fit-Images/customize/neck/v-neck.png" alt="Option 2">
                             </label>
-                        </div> 
+                        </div>
                         <div class="form-check col col-lg-2">
                             <label class="form-check-label" for="neck3">
                                 <input class="form-check-input" type="radio" name="neck" value="u-neck" id="neck3">
                                 <img src="Perfect-fit-Images/customize/neck/u-neck.png" alt="Option 2">
                             </label>
-                        </div> 
+                        </div>
                         <div class="form-check col col-lg-2">
                             <label class="form-check-label" for="neck4">
                                 <input class="form-check-input" type="radio" name="neck" value="sweet-heart" id="neck4">
                                 <img src="Perfect-fit-Images/customize/neck/sweet-heart.png" alt="Option 2">
                             </label>
-                        </div> 
+                        </div>
                         <div class="form-check col col-lg-2">
                             <label class="form-check-label" for="neck5">
                                 <input class="form-check-input" type="radio" name="neck" value="coller-2" id="neck5">
                                 <img src="Perfect-fit-Images/customize/neck/coller-2.png" alt="Option 2">
                             </label>
-                        </div> 
+                        </div>
                         <div class="form-check col col-lg-2">
                             <label class="form-check-label" for="neck6">
                                 <input class="form-check-input" type="radio" name="neck" value="coller" id="neck6">
                                 <img src="Perfect-fit-Images/customize/neck/coller.png" alt="Option 2">
                             </label>
-                        </div> 
+                        </div>
                     </div>
 
                     <div class="sleeve-section row basic-box-style">
-                        <h3>Select Sleeve Design</h3> 
+                        <h3>Select Sleeve Design</h3>
                         <div class="form-check col col-lg-2">
                             <label class="form-check-label" for="sleeve1">
-                                <input class="form-check-input" type="radio" name="sleeve" value="no-modification" id="sleeve1" checked>
+                                <input class="form-check-input" type="radio" name="sleeve" value="no-modification"
+                                    id="sleeve1" checked>
                                 <img src="Perfect-fit-Images/customize/no-modification.png" alt="Option 1">
                             </label>
                         </div>
@@ -158,32 +240,34 @@
                                 <input class="form-check-input" type="radio" name="sleeve" value="bishop" id="sleeve2">
                                 <img src="Perfect-fit-Images/customize/sleeve/bishop.png" alt="Option 2">
                             </label>
-                        </div> 
+                        </div>
                         <div class="form-check col col-lg-2">
                             <label class="form-check-label" for="sleeve3">
                                 <input class="form-check-input" type="radio" name="sleeve" value="flounce" id="sleeve3">
                                 <img src="Perfect-fit-Images/customize/sleeve/flounce.png" alt="Option 2">
                             </label>
-                        </div> 
+                        </div>
                         <div class="form-check col col-lg-2">
                             <label class="form-check-label" for="sleeve4">
                                 <input class="form-check-input" type="radio" name="sleeve" value="shirt" id="sleeve4">
                                 <img src="Perfect-fit-Images/customize/sleeve/shirt.png" alt="Option 2">
                             </label>
-                        </div> 
+                        </div>
                         <div class="form-check col col-lg-2">
                             <label class="form-check-label" for="sleeve5">
-                                <input class="form-check-input" type="radio" name="sleeve" value="double-flounce" id="sleeve5">
+                                <input class="form-check-input" type="radio" name="sleeve" value="double-flounce"
+                                    id="sleeve5">
                                 <img src="Perfect-fit-Images/customize/sleeve/double-flounce.png" alt="Option 2">
                             </label>
-                        </div> 
+                        </div>
                     </div>
 
                     <div class="skirt-section row basic-box-style">
-                        <h3>Select Skirt Design</h3> 
+                        <h3>Select Skirt Design</h3>
                         <div class="form-check col col-lg-2">
                             <label class="form-check-label" for="skirt1">
-                                <input class="form-check-input" type="radio" name="skirt" value="no-modification" id="skirt1" checked>
+                                <input class="form-check-input" type="radio" name="skirt" value="no-modification"
+                                    id="skirt1" checked>
                                 <img src="Perfect-fit-Images/customize/no-modification.png" alt="Option 1">
                             </label>
                         </div>
@@ -192,185 +276,116 @@
                                 <input class="form-check-input" type="radio" name="skirt" value="a-line" id="skirt2">
                                 <img src="Perfect-fit-Images/customize/skirt/a-line.png" alt="Option 2">
                             </label>
-                        </div> 
+                        </div>
                         <div class="form-check col col-lg-2">
                             <label class="form-check-label" for="skirt3">
-                                <input class="form-check-input" type="radio" name="skirt" value="button-a-line" id="skirt3">
+                                <input class="form-check-input" type="radio" name="skirt" value="button-a-line"
+                                    id="skirt3">
                                 <img src="Perfect-fit-Images/customize/skirt/button-a-line.png" alt="Option 2">
                             </label>
-                        </div> 
+                        </div>
                         <div class="form-check col col-lg-2">
                             <label class="form-check-label" for="skirt4">
                                 <input class="form-check-input" type="radio" name="skirt" value="ruffle" id="skirt4">
                                 <img src="Perfect-fit-Images/customize/skirt/ruffle.png" alt="Option 2">
                             </label>
-                        </div> 
+                        </div>
                         <div class="form-check col col-lg-2">
                             <label class="form-check-label" for="skirt5">
-                                <input class="form-check-input" type="radio" name="skirt" value="box-pleated" id="skirt5">
+                                <input class="form-check-input" type="radio" name="skirt" value="box-pleated"
+                                    id="skirt5">
                                 <img src="Perfect-fit-Images/customize/skirt/box-pleated.png" alt="Option 2">
                             </label>
-                        </div> 
+                        </div>
                         <div class="form-check col col-lg-2">
                             <label class="form-check-label" for="skirt6">
                                 <input class="form-check-input" type="radio" name="skirt" value="pleated" id="skirt6">
                                 <img src="Perfect-fit-Images/customize/skirt/pleated.png" alt="Option 2">
                             </label>
-                        </div> 
+                        </div>
                     </div>
 
                     <div class="waist-band-section row basic-box-style">
-                        <h3>Select Waistband</h3> 
+                        <h3>Select Waistband</h3>
                         <div class="form-check col col-lg-2">
                             <label class="form-check-label" for="waist-band1">
-                                <input class="form-check-input" type="radio" name="waist-band" value="no-modification" id="waist-band1" checked>
+                                <input class="form-check-input" type="radio" name="waist-band" value="no-modification"
+                                    id="waist-band1" checked>
                                 <img src="Perfect-fit-Images/customize/no-modification.png" alt="Option 1">
                             </label>
                         </div>
                         <div class="form-check col col-lg-2">
                             <label class="form-check-label" for="waist-band2">
-                                <input class="form-check-input" type="radio" name="waist-band" value="yes" id="waist-band2">
+                                <input class="form-check-input" type="radio" name="waist-band" value="yes"
+                                    id="waist-band2">
                                 <img src="Perfect-fit-Images/customize/waist-band/with-waistband.png" alt="Option 2">
                             </label>
-                        </div> 
+                        </div>
                         <div class="form-check col col-lg-2">
                             <label class="form-check-label" for="waist-band3">
-                                <input class="form-check-input" type="radio" name="waist-band" value="no" id="waist-band3">
+                                <input class="form-check-input" type="radio" name="waist-band" value="no"
+                                    id="waist-band3">
                                 <img src="Perfect-fit-Images/customize/waist-band/without-waistband.png" alt="Option 2">
                             </label>
-                        </div>  
+                        </div>
                     </div>
 
                     <div class="measurement-section row basic-box-style">
-                        <h3>Measure Section</h3> 
+                        <h3>Measure Section</h3>
                         <div class="form-check col">
                             <div class="mb-3">
-                                <label class="form-label"><h6>Length of Dress</h6></label>
+                                <label class="form-label">
+                                    <h6>Length of Dress</h6>
+                                </label>
                                 <div class="input-group mb-3 has-validation">
                                     <input type="number" class="form-control" name="length" required>
                                     <span class="input-group-text">inch</span>
                                     <div class="invalid-feedback">
                                         Enter the dress length.
                                     </div>
-                                </div>                                  
+                                </div>
                             </div>
                         </div>
-                        
+
                         <div class="form-check col">
                             <div class="mb-3">
-                                <label class="form-label"><h6>Length of Body</h6></label>
+                                <label class="form-label">
+                                    <h6>Length of Body</h6>
+                                </label>
                                 <div class="input-group mb-3 has-validation">
                                     <input type="number" class="form-control" name="body" required>
                                     <span class="input-group-text">inch</span>
                                     <div class="invalid-feedback">
                                         Enter the body length.
                                     </div>
-                                </div>                                  
+                                </div>
                             </div>
-                        </div>  
-        
+                        </div>
+
                         <div class="form-check col">
                             <div class="mb-3">
-                                <label class="form-label"><h6>Length of Sleeve</h6></label>
+                                <label class="form-label">
+                                    <h6>Length of Sleeve</h6>
+                                </label>
                                 <div class="input-group mb-3 has-validation">
                                     <input type="number" class="form-control" name="sleeve" required>
                                     <span class="input-group-text">inch</span>
                                     <div class="invalid-feedback">
                                         Enter the sleeve length.
                                     </div>
-                                </div>                                  
+                                </div>
                             </div>
-                        </div>  
+                        </div>
                     </div>
                 </form>
-            </div>
-
-            <div class="col-lg-4 col-sm-12">
-                <div class="price-update basic-box-style">
-                    <div class="box-style">
-                        <h5>Regular Price </h5>
-                        <span class="regular-price">1200</span>
-                    </div>
-        
-                    <div class="box-style">
-                        <table class="table" id="customize-price-table">
-                            <tr>
-                                <th>Category</th>
-                                <th class="text-end">Price</th>
-                            </tr>
-                            <tr>
-                                <td>Fabric</td>
-                                <td class="text-end"></td>
-                            </tr>
-                            <tr>
-                                <td>Neck Design</td>
-                                <td class="text-end"></td>
-                            </tr>
-                            <tr>
-                                <td>Sleeve Design</td>
-                                <td class="text-end"></td>
-                            </tr>
-                            <tr>
-                                <td>Waist Design</td>
-                                <td class="text-end"></td>
-                            </tr>
-                            <tr>
-                                <td>Waistband</td>
-                                <td class="text-end"></td>
-                            </tr>
-                            <tr>
-                                <td>Length of Dress</td>
-                                <td class="text-end"></td>
-                            </tr>
-                            <tr>
-                                <td>Length of Body </td>
-                                <td class="text-end"></td>
-                            </tr>
-                            <tr>
-                                <td>Length of Sleeve</td>
-                                <td class="text-end"></td>
-                            </tr>
-                            <tr>
-                                <th class="border-0">Total </th>
-                                <th class="border-0 text-end"></th>
-                            </tr>
-                        </table>
-                    </div>
-                           
-                    <div class="box-style">
-                        <table class="price-calculation">
-                            <tr>
-                                <td>Total Price</th>
-                                <td>=</th>
-                                <td>Price</th>
-                                <td>+</th>
-                                <td>Customization</th>
-                                <td>+</th>
-                                <td>Delivery</th>
-                            </tr>
-                            <tr>
-                                <th class="total-price"></th>
-                                <th>=</th>
-                                <th class="regular-price"></th>
-                                <th>+</th>
-                                <th class="customize-total">0</th>
-                                <th>+</th>
-                                <th class="delivery-price">100</th>
-                            </tr>
-                        </table>
-                    </div>
-
-                    <div class="submit-btn">
-                        <button type="submit" form="customize-form" class="btn btn-primary">Order Now</button>
-                    </div>
-                </div>
             </div>
         </div>
     </main>
     <footer id="fornt-footer" class="mt-2"></footer>
-</body> 
-    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script/home-page.js"></script>
-    <script src="script/customize.js"></script>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="script/home-page.js"></script>
+<script src="script/customize.js"></script>
 </html>

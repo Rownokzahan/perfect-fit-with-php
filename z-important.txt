@@ -17,3 +17,5 @@
     f
     f
     toString(36) method, 36 represents base 36. The toString(36) represents digits beyond 9 by letters.
+
+## bootsrap modal related error 99% of time causes for reapeating jquery js and bootsrap js

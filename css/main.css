@@ -150,6 +150,15 @@ footer p.copyright{
     background-clip: text;
     color: transparent;
 }
+
+.main-content{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 100vh;
+}
+.customize-details{
+    overflow-y: scroll;
+}
 .basic-box-style{
     color:  rgb(50, 4, 4);
     background-color: rgb(240, 229, 239);
@@ -193,17 +202,6 @@ span.input-group-text{
     padding: 0;
 }
 
-/* @media only screen and (min-width: 1490px) {
-    .price-update {
-        position: fixed;
-        right: 0;
-        top: 0;
-    }
-} */
-.row1{
-    height: 660px;
-    overflow-y: scroll;
-}
 .price-calculation{
     color: black;
     font-weight: 600;
