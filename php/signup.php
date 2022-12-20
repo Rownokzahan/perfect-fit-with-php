@@ -10,7 +10,7 @@
             if(!$result){
                 echo json_encode($mysqli->error);
             }else{
-                echo json_encode("success");
+                echo json_encode("Successfully signed up !");
             }
         }
     }    
