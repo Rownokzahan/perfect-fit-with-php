@@ -15,3 +15,12 @@ function displayData(){
 function customize(id){
     location.href = 'customize.html?dress_id='+id;
 }
+
+function addToWishlist(id){
+    wishlist = localStorage.getItem('wishlist');
+    wishlist = JSON.parse(wishlist) ?? [];
+    if (!wishlist.includes(id)){
+        wishlist.push(id);
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    }
+}
