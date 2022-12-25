@@ -34,7 +34,7 @@
                                     <p class="">$ <span id="dress-price">'.$price.'</span></p>
                                 </div>
                                 <div class="d-flex justify-content-evenly pb-3">
-                                <button onclick=wishlist('.$id.') class="btn btn-secondary">
+                                <button onclick=addToWishlist('.$id.') class="btn btn-secondary">
                                     <i class="bi bi-heart-fill"></i> Add to Wishlist
                                 </button>
                                 <button onclick=customize('.$id.') class="btn btn-primary">
