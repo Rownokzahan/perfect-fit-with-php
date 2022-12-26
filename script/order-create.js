@@ -1,7 +1,7 @@
 // genrate delivery date
 const d = new Date();
 d.setDate(d.getDate() + 14);
-const delivery_date= `${d.getDate()}-${d.getMonth()}-${d.getFullYear()}`;
+const delivery_date= `${d.getDate()}-${d.getMonth()+1}-${d.getFullYear()}`;
 $('#delivery-date').text(delivery_date);
 
 
