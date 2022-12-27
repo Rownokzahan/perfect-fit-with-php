@@ -176,11 +176,16 @@ footer p.copyright{
 
 .main-content{
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    height: 100vh;
+    grid-template-columns: 2fr 1fr;
 }
-.customize-details{
-    overflow-y: scroll;
+.customize-details {
+    height: max-content;
+}
+.price-update{
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: max-content;
 }
 .basic-box-style{
     color:  rgb(50, 4, 4);
@@ -218,9 +223,7 @@ span.input-group-text{
     background: #cb2475;
     color: white;
 }
-.price-update{
-    margin-bottom: 30px;
-}
+
 .price-update td{
     padding: 0;
 }
