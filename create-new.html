@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perfect Fit</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="css/bootsrap/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- icon cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <main>
+        <div class="title">
+            <h1>Create Your Dress</h1>
+        </div>
+
+        <div class="main-area">
+            <div class="customize-details">
+                <form id="create-new-form" class="needs-validation" novalidate>
+                </form>
+                <div class="basic-box-style">
+                    <h3 class="pb-3">Dress Cost</h3>
+                    <div class="box-style">
+                        <table class="table" id="price-table">
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <div class="right-col">
+                <div class="img-style" id="display-dress">
+                    <img src="Perfect-fit-Images/Dresses/Dress/Dress1.jpg">
+                </div>
+                <div class="basic-box-style">
+                    <div class="box-style">
+                        <table class="price-info">
+                            <tr>
+                                <th>Total Price</th>
+                                <th>=</th>
+                                <th>Dress Cost</th>
+                                <th>+</th>
+                                <th>Delivery Cost</th>
+                            </tr>
+                            <tr>
+                                <th class="total-price">740</th>
+                                <th>=</th>
+                                <th class="dress-cost">640</th>
+                                <th>+</th>
+                                <th class="delivery-price">100</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="submit-btn">
+                        <button type="submit" form="create-new-form" class="btn btn-primary">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="fornt-footer" class="mt-2"></footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="script/home-page.js"></script>
+<script src="script/create-new.js"></script>
+
+</html>
