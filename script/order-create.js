@@ -4,10 +4,11 @@ d.setDate(d.getDate() + 14);
 const delivery_date= `${d.getDate()}-${d.getMonth()+1}-${d.getFullYear()}`;
 $('#delivery-date').text(delivery_date);
 
+const url = new URL(window.location);
+const params = new URLSearchParams(url.search);
+const customize_id = params.get('customize_id');
+const dress_name= params.get('dress_name');
 
-const url_query = window.location.search;
-const customize_id = url_query.slice(1).split("&")[0].split("=")[1];
-const dress_name= url_query.slice(1).split("&")[1].split("=")[1].split('%20').join(' ');
 $('#dress-name').text(dress_name);
 
 // random order id generator
