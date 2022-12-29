@@ -19,7 +19,7 @@
                     Buy Now
                 </button>
             </td>
-            <td class="remove-btn"><i onclick="remove('.$id.')" class="bi bi-x-circle-fill"></i></td>
+            <td><i onclick="remove('.$id.')" class="bi bi-x-circle-fill remove-btn"></i></td>
         </tr>
     ';
     echo $tableRow;    

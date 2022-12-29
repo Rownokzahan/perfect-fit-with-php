@@ -176,11 +176,16 @@ footer p.copyright{
 
 .main-content{
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    height: 100vh;
+    grid-template-columns: 2fr 1fr;
 }
-.customize-details{
-    overflow-y: scroll;
+.customize-details {
+    height: max-content;
+}
+.price-update{
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: max-content;
 }
 .basic-box-style{
     color:  rgb(50, 4, 4);
@@ -218,9 +223,7 @@ span.input-group-text{
     background: #cb2475;
     color: white;
 }
-.price-update{
-    margin-bottom: 30px;
-}
+
 .price-update td{
     padding: 0;
 }
@@ -357,4 +360,36 @@ span.input-group-text{
         height: 68vh;
         overflow-x: auto;
     }
+}
+
+/* ------------------------- Create New Page ------------------------- */
+.main-area{
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+}
+.customize-details {
+    height: max-content;
+}
+.right-col{
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: max-content;
+}
+
+.img-style{
+    margin: 2%;
+    border-radius: 13px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.img-style img{
+    max-width: 100%;
+    height: 60vh;
+}
+.price-info tr th{
+    padding: 4px;
+    text-align: center;
 }

@@ -33,8 +33,8 @@
     $sql = "select * from `dress-item` where id ='$dress_id'";
     $result = mysqli_query($con,$sql);
     $row3=mysqli_fetch_assoc($result);
-    $dress_name = $row3['name'];
-    $dress_image = $row3['image'];
+    $dress_name = $row3['name'] ?? "New";
+    $dress_image = $row3['image'] ?? "New";
 
 
     $main ='       
