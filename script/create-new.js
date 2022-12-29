@@ -45,7 +45,6 @@ $('#create-new-form').click(function(e){
 
     const src = $(e.target).attr("src");
     const pic_name = src.substring(src.lastIndexOf('/') + 1, src.lastIndexOf('.'));
-    console.log(pic_name);
     $('#display-dress').html('<img src="Perfect-fit-Images/Create/'+pic_name+'.jpg" alt="'+pic_name+'">');
 
 
