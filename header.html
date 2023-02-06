@@ -1,36 +1,28 @@
-<nav class="navbar navbar-expand-lg">
-    <div class="container container-fluid">
-        <a class="navbar-brand" href="index.html"><img src="Perfect-fit-Images/logo.png" alt="logo" srcset=""></a>
+<nav class="navbar navbar-expand-lg py-3">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><img src="Perfect-fit-Images/logo.png" alt="logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="all-dresses.html">Dresses</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="wishlist.html">Wishlist</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="create-new.html">Create New</a>
-                </li>
+        <div class="collapse navbar-collapse gap-3 ms-md-3 ms-0" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3 ms-md-3 ms-0">
+                <a class="nav-link text-black" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link text-black" href="all-dresses.html">Dresses</a>
+                <a class="nav-link text-black" href="wishlist.html">Wishlist</a>
+                <a class="nav-link text-black" href="create-new.html">Create New</a>
             </ul>
             <div class="nav-item d-flex">
                 <div class="nav-link">
-                    <a href="" class="notification-icon"><i class="bi bi-bell-fill"></i></a>
+                    <a href="" class="fs-5"><i class="bi bi-bell-fill"></i></a>
                     <span class="notification-amount">0</span>
                 </div>
             </div>
             <div class="nav-item d-flex">
                 <div class="nav-link">
-                    <button id="login-btn" class="btn btn-primary rounded-4" data-bs-toggle="modal"
+                    <button id="login-btn" class="btn btn-primary py-2 px-4" data-bs-toggle="modal"
                         data-bs-target="#login-modal">Login</button>
-                    <button id="logout-btn" class="btn btn-primary rounded-4">Logout</button>    
+                    <button id="logout-btn" class="btn btn-primary py-2 px-4">Logout</button>
                 </div>
             </div>
         </div>
@@ -157,7 +149,7 @@
                 </div>
 
                 <p class="text-center my-4">Already have an account? <a data-bs-toggle="modal"
-                    href="#login-modal">Login</a></p>
+                        href="#login-modal">Login</a></p>
             </div>
         </div>
     </div>
@@ -169,11 +161,11 @@
         const forms = document.querySelectorAll('.needs-validation')
         Array.from(forms).forEach(form => {
             form.addEventListener('submit', event => {
-            if (!form.checkValidity()) {
-                event.preventDefault()
-                event.stopPropagation()
-            }
-            form.classList.add('was-validated')
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+                form.classList.add('was-validated')
             }, false)
         })
     })()
@@ -191,7 +183,7 @@
                 success: function (data, status) {
                     const response = JSON.parse(data);
                     $('#signup-message').html(response);
-                    $('#signup-modal').modal('hide');                    
+                    $('#signup-modal').modal('hide');
                     $('#login-modal').modal('show');
                 },
             });
@@ -211,7 +203,7 @@
                 success: function (data, status) {
                     const response = JSON.parse(data);
                     $('#login-message').html(response);
-                    if(response == "Success"){ 
+                    if (response == "Success") {
                         $('#login-btn').css("display", "none");
                         $('#logout-btn').css("display", "block");
                         $('#login-modal').modal('hide');
@@ -222,12 +214,12 @@
         }));
     });
 
-    if (localStorage.getItem('isLoggedIn') === 'true'){
+    if (localStorage.getItem('isLoggedIn') === 'true') {
         $('#logout-btn').css("display", "block");
         $('#login-btn').css("display", "none");
     }
 
-    $('#logout-btn').click(function() {
+    $('#logout-btn').click(function () {
         localStorage.removeItem('isLoggedIn');
         window.location.reload();
     });

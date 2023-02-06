@@ -1,4 +1,9 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -6,132 +11,88 @@
 
 /* ---------------------------home-page------------------------------------------------------------- */
 
-nav{
+nav {
     background-color: rgb(240, 229, 239);
 }
-.nav-link{
-    margin-left: 30px;
-    color: black ;
-}
-.notification-icon{
-    font-size: larger ;
-}
-.notification-amount{
+
+.notification-amount {
     position: relative;
     bottom: 11px;
     right: 11px;
     background-color: rgb(248, 245, 245);
     border-radius: 45%;
     padding: 0 5px;
-    color:  rgb(50, 4, 4);
-
-}
-.profile-icon{
-    font-size: larger;
-    background-color: rgb(235, 227, 227);
-    border-radius: 50%;
-    box-shadow: 0 0 2px 0;
-    padding: 1px 5px;
-}
-
-
-.banner{
-    background-image: url("../Perfect-fit-Images/banner.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height:700px;
-}
-.banner-content{
-    margin-left: 10%;
-    padding: 140px 0 200px;
-    width: 45%;
     color: rgb(50, 4, 4);
 }
+
+.banner {
+    background-image: url("../Perfect-fit-Images/banner.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    width: 100%;
+    height: 700px;
+    color: rgb(50, 4, 4);
+}
+
 
 @media only screen and (max-width: 600px) {
-    .banner{
-        height:400px;
-    }
-
-    .banner-content{
-        margin-left: 10%;
-        padding: 15% 0 10%;
-        width: 60%;
-        color: rgb(50, 4, 4);
+    .banner {
+        height: 500px;
     }
 }
 
-.review-section{
-    background-color: antiquewhite;
-}
-.review-section h2{
-    color: rgb(50, 4, 4);
-}
-
-.review-profile{
-    font-size: 45px;   
-}
-.review{
-    background-color: rgb(243, 54, 161);
-    color: white;
-    border-radius: 15px;
-    box-shadow: 0px 2px 5px 0px rgba(47, 1, 1, 0.75);
-    padding: 20px 15px;
-}
-
-
-footer{
-    padding: 13px;
-    text-align: center;
+footer {
     background-color: rgb(15, 1, 36);
-    color: white;
 }
-.contact-icons i{
+
+.contact-icons i {
     box-shadow: 0 0 2px 0;
     padding: 3px 8px;
     border-radius: 25%;
 }
-.contact-icons i:hover{
+
+.contact-icons i:hover {
     position: relative;
     bottom: 4px;
 }
-#home-info, #mail-info, #phone-info{
+
+#home-info,
+#mail-info,
+#phone-info {
     display: none;
 }
-footer p{
-    font-size: 14px;
-}
-footer p.copyright{
-    font-size: 12px;
-}
 
-#logout-btn{
+#logout-btn {
     display: none;
 }
 
 /* ---------------------all-dresses-page------------------------------------------------------- */
 
-.all-dresses-list{
+.all-dresses-list {
     margin: 2%;
 }
-.dress-category{
+
+.dress-category {
     background-color: rgb(240, 229, 239);
     border-radius: 20px;
     padding: 30px;
     margin-bottom: 30px;
 }
-.dress-category-name{
+
+.dress-category-name {
     font-size: 30px;
     color: rgb(50, 4, 4);
 }
-.line{
+
+.line {
     border-bottom: 4px solid rgb(238, 9, 180);
     width: 100px;
     border-radius: 4px;
     margin-bottom: 20px;
 }
-.dress-item{
+
+.dress-item {
     box-shadow: 0 0 6px 0;
     background-color: #fff;
     border-radius: 15px;
@@ -139,109 +100,125 @@ footer p.copyright{
     height: auto;
     margin-top: 20px;
 }
-.dress-item img{
+
+.dress-item img {
     width: 100%;
     object-fit: contain;
     aspect-ratio: 5/4;
     border-radius: 11px 11px 0 0;
-    margin-bottom: 10px ;
+    margin-bottom: 10px;
 }
-.item-body{
-    padding-left:20px ;
-    color:  rgb(50, 4, 4);
+
+.item-body {
+    padding-left: 20px;
+    color: rgb(50, 4, 4);
 }
+
 @media only screen and (max-width: 600px) {
-    .dress-category-name{
+    .dress-category-name {
         font-size: 22px;
     }
-    .line{
+
+    .line {
         width: 70px;
         margin-bottom: 7px;
     }
-    .dress-item{
+
+    .dress-item {
         width: 240px
     }
 }
 
 /*--------------------------------- cutomize-page-------------------------------------------- */
 
-.title h1{
+.title h1 {
     width: fit-content;
     margin: 10px auto;
-    background-image: linear-gradient(to right, rgb(105, 8, 150),rgb(164, 20, 116));
+    background-image: linear-gradient(to right, rgb(105, 8, 150), rgb(164, 20, 116));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
 
-.main-content{
+.main-content {
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
+
 .customize-details {
     height: max-content;
 }
-.price-update{
+
+.price-update {
     position: sticky;
     top: 0;
     left: 0;
     height: max-content;
 }
-.basic-box-style{
-    color:  rgb(50, 4, 4);
+
+.basic-box-style {
+    color: rgb(50, 4, 4);
     background-color: rgb(240, 229, 239);
-    border-radius: 15px;   
+    border-radius: 15px;
     padding: 20px;
     margin: 25px;
 }
-.dress-img{
+
+.dress-img {
     width: 266px;
     height: auto;
     border-radius: 12px;
     margin: 20px 0;
 }
-.box-style{
+
+.box-style {
     background-color: #fff;
     border-top: 6px solid rgb(175, 14, 162);
     border-radius: 14px;
     margin: 0 20px;
-    padding: 10px 20px;   
+    padding: 10px 20px;
 }
-div.form-check.col{
+
+div.form-check.col {
     margin: 30px;
 }
-input[type=radio]{ 
+
+input[type=radio] {
     position: relative;
     bottom: -140px;
     left: 70px;
-}  
+}
+
 input+img {
     cursor: pointer;
     width: 120px;
 }
-span.input-group-text{
+
+span.input-group-text {
     background: #cb2475;
     color: white;
 }
 
-.price-update td{
+.price-update td {
     padding: 0;
 }
 
-.price-calculation{
+.price-calculation {
     color: black;
     font-weight: 600;
 }
-.price-calculation th{
+
+.price-calculation th {
     padding-right: 2px;
     text-align: center;
 }
 
-.submit-btn{
+.submit-btn {
     border-radius: 14px;
     margin: 20px 20px 0;
 }
-.submit-btn button{
+
+.submit-btn button {
     width: 100%;
     font-size: 25px;
     font-weight: 600;
@@ -249,40 +226,48 @@ span.input-group-text{
 }
 
 @media only screen and (max-width: 600px) {
-    .main-content{
+    .main-content {
         display: block;
         height: auto;
     }
-    .basic-box-style{
-        color:  rgb(50, 4, 4);
+
+    .basic-box-style {
+        color: rgb(50, 4, 4);
         background-color: rgb(240, 229, 239);
-        border-radius: 10px;   
+        border-radius: 10px;
         padding: 4%;
         margin: 4% 2%;
     }
-    .dress-img{
+
+    .dress-img {
         width: 60%;
     }
-    div.form-check.col{
+
+    div.form-check.col {
         margin: 0px;
         margin-bottom: 20px;
     }
-    div.form-check.col img{
+
+    div.form-check.col img {
         width: 80px;
     }
-    input[type=radio]{ 
+
+    input[type=radio] {
         position: relative;
         bottom: -96px;
         left: 51px;
-    } 
-    .measurement-section{
+    }
+
+    .measurement-section {
         display: block;
     }
-    .submit-btn{
+
+    .submit-btn {
         border-radius: 4px;
         margin: 4%;
     }
-    .submit-btn button{
+
+    .submit-btn button {
         width: 100%;
         font-size: 20px;
         font-weight: 400;
@@ -293,8 +278,8 @@ span.input-group-text{
 
 /*--------------------------------- order-page-------------------------------------------- */
 
-.delivery-detail{
-    color:  rgb(18, 1, 1);
+.delivery-detail {
+    color: rgb(18, 1, 1);
     margin: 20px;
     margin-bottom: 100px;
     padding: 20px;
@@ -303,17 +288,19 @@ span.input-group-text{
     /* box-shadow: 0 0 3px 0; */
 }
 
-.order-detail{
+.order-detail {
     padding: 35px 60px;
     background-color: #fff;
 }
-.order-detail span{
+
+.order-detail span {
     display: inline-block;
     padding-left: 15px;
     font-size: 19px;
     margin-bottom: 16px;
 }
-.order-detail .btn{
+
+.order-detail .btn {
     position: relative;
     font-size: 24px;
     margin-top: 60px;
@@ -321,7 +308,7 @@ span.input-group-text{
     box-shadow: 0 0 4px 0;
 }
 
-#confirm-modal a{
+#confirm-modal a {
     display: block;
     width: min-content;
     margin-left: auto;
@@ -331,12 +318,12 @@ span.input-group-text{
 
 /* ------------------------- Wishlist Page-------------------- */
 
-.remove-btn{
+.remove-btn {
     font-size: 25px;
     cursor: pointer;
 }
 
-.wish-list{
+.wish-list {
     margin: 2%;
     border-radius: 10px;
     padding: 2% 0;
@@ -347,37 +334,42 @@ span.input-group-text{
     justify-content: center;
     vertical-align: middle;
 }
+
 @media only screen and (max-width: 600px) {
     * {
-      font-size: small;
+        font-size: small;
     }
-    .wish-list{
+
+    .wish-list {
         margin: 0;
         border-radius: 0;
         padding: 0;
     }
-    .wish-list{
+
+    .wish-list {
         height: 68vh;
         overflow-x: auto;
     }
 }
 
 /* ------------------------- Create New Page ------------------------- */
-.main-area{
+.main-area {
     display: grid;
     grid-template-columns: 1.8fr 1fr;
 }
+
 .customize-details {
     height: max-content;
 }
-.right-col{
+
+.right-col {
     position: sticky;
     top: 0;
     left: 0;
     height: max-content;
 }
 
-.img-style{
+.img-style {
     margin: 2%;
     border-radius: 13px;
     background-color: #fff;
@@ -385,11 +377,12 @@ span.input-group-text{
     justify-content: center;
 }
 
-.img-style img{
+.img-style img {
     max-width: 100%;
     height: 60vh;
 }
-.price-info tr th{
+
+.price-info tr th {
     padding: 4px;
     text-align: center;
 }
